@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Packing list — Sierra Nevada, Jun 7–12 (Lodgepole)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+<style>
+:root {
+  --bg0: #ffffff; --bg1: #f4f3f0; --bg2: #eceae7;
+  --bg-danger: #FCEBEB; --bg-success: #EAF3DE; --bg-warning: #FAEEDA; --bg-info: #E6F1FB;
+  --tx0: #1a1a18; --tx1: #5f5e5a; --tx2: #888780;
+  --tx-danger: #791F1F; --tx-success: #27500A; --tx-warning: #633806; --tx-info: #0C447C;
+  --bdr: rgba(0,0,0,0.10); --bdr2: rgba(0,0,0,0.18);
+  --r8: 8px; --r12: 12px; --accent: #1D9E75;
+  --f: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg0: #1e1e1c; --bg1: #2c2c2a; --bg2: #121210;
+    --bg-danger: #791F1F; --bg-success: #27500A; --bg-warning: #633806; --bg-info: #0C447C;
+    --tx0: #f0ede8; --tx1: #a8a69f; --tx2: #6e6c66;
+    --tx-danger: #F7C1C1; --tx-success: #C0DD97; --tx-warning: #FAC775; --tx-info: #B5D4F4;
+    --bdr: rgba(255,255,255,0.10); --bdr2: rgba(255,255,255,0.20);
+  }
+  .t-dav { background: #633806 !important; color: #FAEEDA !important; }
+  .t-mad { background: #3C3489 !important; color: #EEEDFE !important; }
+  .tag-pill[data-tag="dav"].on { background: #633806 !important; color: #FAEEDA !important; }
+  .tag-pill[data-tag="mad"].on { background: #3C3489 !important; color: #EEEDFE !important; }
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--f);
+  background: var(--bg2);
+  color: var(--tx0);
+  line-height: 1.5;
+  padding: 2rem 1rem 4rem;
+  min-height: 100vh;
+}
+.container {
+  max-width: 680px; margin: 0 auto;
+  background: var(--bg0);
+  border-radius: var(--r12);
+  padding: 1.5rem;
+  border: 0.5px solid var(--bdr);
+}
+.tag { font-size: 10px; border-radius: 4px; padding: 2px 7px; white-space: nowrap; display: inline-block; }
+.t-crit { background: var(--bg-danger); color: var(--tx-danger); }
+.t-seq  { background: var(--bg-warning); color: var(--tx-warning); }
+.t-cur  { background: var(--bg-success); color: var(--tx-success); }
+.t-jer  { background: var(--bg-info);    color: var(--tx-info); }
+.t-dav  { background: #FAEEDA; color: #633806; }
+.t-mad  { background: #EEEDFE; color: #3C3489; }
+.sec-wrap { border: 0.5px solid var(--bdr); border-radius: var(--r12); margin-bottom: 10px; overflow: hidden; }
+.sec-hdr  { display: flex; align-items: center; gap: 10px; padding: 10px 14px; cursor: pointer; user-select: none; background: var(--bg1); transition: opacity 0.15s; }
+.sec-hdr:hover { opacity: 0.75; }
+.irow { display: flex; align-items: flex-start; gap: 10px; padding: 8px 14px; border-bottom: 0.5px solid var(--bdr); transition: opacity 0.15s, background 0.1s; }
+.irow:last-child { border-bottom: none; }
+.irow:hover { background: var(--bg1); }
+.irow label { cursor: pointer; flex: 1; }
+input[type="checkbox"] { accent-color: var(--accent); cursor: pointer; flex-shrink: 0; margin-top: 3px; }
+.btn { display: inline-flex; align-items: center; gap: 5px; font-family: var(--f); font-size: 12px; color: var(--tx1); background: transparent; border: 0.5px solid var(--bdr2); border-radius: var(--r8); padding: 5px 10px; cursor: pointer; transition: background 0.15s; }
+.btn:hover { background: var(--bg1); }
+.btn-danger { color: var(--tx-danger); border-color: var(--bg-danger); }
+.btn-danger:hover { background: var(--bg-danger); }
+.del-btn { background: none; border: none; cursor: pointer; color: var(--tx2); padding: 3px 4px; border-radius: var(--r8); line-height: 1; flex-shrink: 0; font-size: 13px; transition: color 0.15s; font-family: var(--f); margin-top: 1px; }
+.del-btn:hover { color: var(--tx-danger); }
+.add-area { padding: 10px 14px; background: var(--bg1); }
+.add-row  { display: flex; gap: 6px; margin-bottom: 6px; }
+.add-txt, .add-note {
+  font-family: var(--f); background: var(--bg0); color: var(--tx0);
+  border: 0.5px solid var(--bdr2); border-radius: var(--r8); padding: 5px 8px; outline: none;
+  transition: border-color 0.15s;
+}
+.add-txt  { flex: 1; font-size: 13px; }
+.add-note { width: 100%; font-size: 11px; color: var(--tx1); margin-top: 4px; }
+.add-txt:focus, .add-note:focus { border-color: var(--accent); }
+.tag-pills { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 5px; }
+.tag-pill {
+  font-size: 10px; border-radius: 4px; padding: 2px 7px; cursor: pointer;
+  border: 0.5px solid var(--bdr2); background: transparent; color: var(--tx1);
+  font-family: var(--f); transition: all 0.12s; line-height: 1.4;
+}
+.tag-pill[data-tag="crit"].on { background: var(--bg-danger); color: var(--tx-danger); border-color: transparent; }
+.tag-pill[data-tag="seq"].on  { background: var(--bg-warning); color: var(--tx-warning); border-color: transparent; }
+.tag-pill[data-tag="cur"].on  { background: var(--bg-success); color: var(--tx-success); border-color: transparent; }
+.tag-pill[data-tag="jer"].on  { background: var(--bg-info);    color: var(--tx-info);    border-color: transparent; }
+.tag-pill[data-tag="dav"].on  { background: #FAEEDA; color: #633806; border-color: transparent; }
+.tag-pill[data-tag="mad"].on  { background: #EEEDFE; color: #3C3489; border-color: transparent; }
+.edit-hint { font-size: 11px; color: var(--tx2); margin-top: 6px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:2px">
+    <h1 style="font-size:20px;font-weight:500;color:var(--tx0)">Sierra Nevada — Jun 7–12</h1>
+    <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
+      <button class="btn btn-danger" id="restore-btn" onclick="restoreDefaults()" style="display:none">
+        <i class="ti ti-rotate-clockwise" aria-hidden="true"></i> Restore defaults
+      </button>
+      <button class="btn" onclick="resetChecked()">
+        <i class="ti ti-refresh" aria-hidden="true"></i> Reset
+      </button>
+      <button class="btn" id="edit-btn" onclick="toggleEdit()">
+        <i class="ti ti-edit" aria-hidden="true"></i> Edit list
+      </button>
+    </div>
+  </div>
+  <p style="font-size:13px;color:var(--tx1);margin-bottom:1.25rem">
+    Jeremy, David, Maddy &nbsp;·&nbsp; Groveland → Yosemite Valley → Sequoia / Lodgepole (car camping, walk-in)
+  </p>
+
+  <div style="margin-bottom:1.25rem">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+      <span style="font-size:13px;color:var(--tx1)">Overall progress</span>
+      <span id="ov-c" style="font-size:13px;font-weight:500;color:var(--tx0)"></span>
+    </div>
+    <div style="height:5px;background:var(--bdr);border-radius:9999px;overflow:hidden">
+      <div id="ov-b" style="height:100%;background:var(--accent);border-radius:9999px;width:0%;transition:width 0.2s"></div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1.25rem;align-items:center">
+    <span style="font-size:12px;color:var(--tx1)">Tags:</span>
+    <span class="tag t-crit">● Critical</span>
+    <span class="tag t-jer">Jeremy</span>
+    <span class="tag t-dav">David</span>
+    <span class="tag t-mad">Maddy</span>
+    <span class="tag t-seq">Sequoia only</span>
+    <span class="tag t-cur">Curry Village</span>
+  </div>
+
+  <div id="sc"></div>
+
+</div>
+<script>
+/* ─── Data ────────────────────────────────────────────────────────────── */
+const DEFS = [
+  {id:'s1',title:'Clothing & footwear',icon:'ti-shirt',items:[
+    {t:'Rain jacket',g:['crit'],n:null},
+    {t:'Insulating mid-layer / fleece',g:[],n:null},
+    {t:'Merino base layer tops ×2',g:[],n:null},
+    {t:'Hiking pants ×2',g:[],n:null},
+    {t:'Hiking socks ×5 pairs',g:[],n:null},
+    {t:'Moisture-wicking underwear ×5',g:[],n:null},
+    {t:'Wide-brim sun hat',g:[],n:null},
+    {t:'Sleepwear',g:[],n:null},
+    {t:'Broken-in hiking boots',g:['crit','jer'],n:'SI joint — must be well worn-in'},
+    {t:'Hiking boots',g:['dav'],n:null},
+    {t:'Comfortable hiking shoes',g:['mad'],n:null},
+    {t:'Camp sandals',g:[],n:null},
+    {t:'Lightweight gloves',g:['seq'],n:null},
+    {t:'Beanie',g:['seq'],n:null},
+    {t:'Swimsuit (Groveland pool)',g:[],n:null},
+    {t:'Quick-dry shorts',g:[],n:null},
+    {t:'Buff / neck gaiter',g:[],n:null},
+    {t:'Extra fleece',g:['mad'],n:null},
+    {t:'Camp shoes / Crocs',g:[],n:null},
+  ]},
+  {id:'s2',title:'Sleep & shelter',icon:'ti-tent',items:[
+    {t:'3-person tent',g:['crit','seq'],n:null},
+    {t:'30°F sleeping bags ×3',g:['crit','seq'],n:null},
+    {t:'Sleeping pads / mats ×3',g:['seq'],n:null},
+    {t:'Compressible pillows ×3',g:[],n:null},
+    {t:'Extra blanket',g:['cur'],n:null},
+    {t:'Earplugs',g:['cur'],n:'Canvas tent walls — neighbor noise'},
+    {t:'Eye mask',g:[],n:null},
+  ]},
+  {id:'s3',title:'Hiking gear',icon:'ti-mountain',items:[
+    {t:'Trekking poles',g:['crit','jer'],n:'SI joint support'},
+    {t:'3L hydration pack',g:['crit'],n:null},
+    {t:'Water filter (Sawyer Squeeze)',g:['crit'],n:null},
+    {t:'DEET / Picaridin insect repellent ×3',g:['crit'],n:null},
+    {t:'AllTrails offline maps downloaded',g:['crit'],n:null},
+    {t:'Microspikes / traction',g:['seq'],n:'Check early-June snow conditions'},
+    {t:'Bear spray',g:['seq'],n:null},
+    {t:'Head net (mosquito season)',g:[],n:null},
+    {t:'Headlamp ×3 + extra batteries',g:[],n:null},
+    {t:'Sunscreen SPF 50+ ×3',g:['crit'],n:null},
+    {t:'Light gaiters (dust / debris)',g:[],n:null},
+    {t:'Daypack',g:['dav'],n:null},
+    {t:'Whistle ×3',g:[],n:null},
+    {t:'Printed topo maps (backup)',g:[],n:null},
+    {t:'Blister treatment (Compeed)',g:[],n:null},
+    {t:'Trekking poles',g:['dav'],n:null},
+  ]},
+  {id:'s4',title:'Camp kitchen & food',icon:'ti-soup',items:[
+    {t:'Camp stove + fuel (Coleman 2-burner or similar)',g:['seq'],n:'Car camping — no need to limit to backpacking stove'},
+    {t:'Camp cooking pot / pan set',g:['seq'],n:null},
+    {t:'Utensils / spork set ×3',g:[],n:null},
+    {t:'Bowls + cups ×3',g:['seq'],n:null},
+    {t:'Use food storage locker at campsite each night',g:['crit','seq'],n:'Lodgepole provides metal lockers — all food, trash, and scented items must go in overnight'},
+    {t:'Water purification tabs (backup)',g:[],n:null},
+    {t:'Pasture-raised hard-boiled eggs (eat days 1–2)',g:[],n:null},
+    {t:'Organic bison jerky',g:[],n:null},
+    {t:'Wild-caught salmon / sardine pouches',g:[],n:null},
+    {t:'Organic mixed nuts — mango-free',g:['crit','dav'],n:'David: avocado + mango allergy — check label'},
+    {t:'LMNT electrolyte packets',g:[],n:null},
+    {t:'Organic dark chocolate',g:[],n:null},
+    {t:'Dried fruit mix — mango-free',g:['crit','dav'],n:'Read label before packing'},
+    {t:'Pasture-raised meat bars (Epic)',g:[],n:null},
+    {t:'Organic instant oatmeal',g:[],n:null},
+    {t:'MCT oil packets',g:['jer'],n:null},
+    {t:'Maddy comfort snacks',g:['mad'],n:null},
+    {t:'Collapsible water bottles ×3',g:[],n:null},
+    {t:'Biodegradable dish soap',g:['seq'],n:null},
+    {t:'Camp towel / sponge',g:['seq'],n:null},
+    {t:'Cutting board + knife',g:['seq'],n:null},
+    {t:'Garbage bags (pack it out)',g:[],n:null},
+    {t:'Coffee (Aeropress or instant)',g:[],n:null},
+    {t:'Collagen / protein powder packets',g:['jer'],n:null},
+  ]},
+  {id:'s5',title:'Health, hygiene & meds',icon:'ti-activity',items:[
+    {t:'Losartan — 6 days + 2 buffer',g:['crit','jer'],n:null},
+    {t:'Amlodipine — 6 days + 2 buffer',g:['crit','jer'],n:null},
+    {t:'Ibuprofen / Tylenol',g:[],n:null},
+    {t:'Antihistamines (Benadryl / Zyrtec)',g:[],n:null},
+    {t:'Melatonin',g:['mad'],n:null},
+    {t:'Full first aid kit',g:['crit'],n:null},
+    {t:'Ace bandage',g:['jer'],n:'SI joint insurance'},
+    {t:'Baby wipes ×2 packs',g:[],n:null},
+    {t:'TP + trowel (cat hole kit)',g:['seq'],n:null},
+    {t:'Biodegradable castile soap',g:[],n:null},
+    {t:'Dry shampoo',g:[],n:null},
+    {t:'Toothbrush + toothpaste ×3',g:[],n:null},
+    {t:'Sunscreen SPF 50+ (extra)',g:[],n:null},
+    {t:'Lip balm SPF ×3',g:[],n:null},
+    {t:'Hand sanitizer ×3',g:[],n:null},
+    {t:'Altitude / headache OTC meds',g:[],n:null},
+    {t:'Prescription glasses / contacts',g:[],n:null},
+    {t:'Deodorant ×3',g:[],n:null},
+    {t:'Extra electrolytes (hot hike days)',g:[],n:null},
+    {t:'EpiPen (avocado / mango risk)',g:['dav'],n:'Confirm with doctor if needed'},
+    {t:'Blister kit (Compeed + moleskin)',g:[],n:null},
+  ]},
+  {id:'s6',title:'Art supplies',icon:'ti-palette',items:[
+    {t:'Field watercolor set',g:['crit','jer'],n:null},
+    {t:'Hardbound A5 cold press pad (Fabriano / Stillman & Birn)',g:['crit','jer'],n:null},
+    {t:'Pentel Aquash water brushes ×3 (self-contained)',g:['jer'],n:null},
+    {t:'Micron fineliners 01 + 05',g:['jer'],n:null},
+    {t:'Pencil set (H + 2B)',g:['jer'],n:null},
+    {t:'Kneaded eraser',g:['jer'],n:null},
+    {t:'Small mixing palette',g:['jer'],n:null},
+    {t:'Masking tape (to secure paper)',g:['jer'],n:null},
+    {t:'Zip-lock bag (watercolor protection)',g:[],n:null},
+    {t:'Colored pencils — travel set',g:['jer'],n:null},
+    {t:'Leaf pressing kit',g:[],n:null},
+    {t:'Magnifying glass',g:[],n:null},
+    {t:'Small A6 sketchbook (loose sketching)',g:['jer'],n:null},
+    {t:'Art supplies for Maddy',g:['mad'],n:'Low-pressure, no expectation'},
+  ]},
+  {id:'s7',title:'Writing',icon:'ti-pencil',items:[
+    {t:'Reckoning capture journal (Leuchtturm1917 / Moleskine)',g:['crit','jer'],n:null},
+    {t:'iPad + keyboard case',g:['crit','jer'],n:null},
+    {t:'MacBook Air',g:['crit','jer'],n:null},
+    {t:'26,800mAh battery pack (Anker)',g:['crit','seq','jer'],n:'No power at Sequoia'},
+    {t:'Jetstream / G2 pens ×3',g:[],n:null},
+    {t:'Index cards ×50',g:['jer'],n:null},
+    {t:'Printed writing prompt list',g:['jer'],n:null},
+    {t:'Extra lined notebook (small)',g:[],n:null},
+    {t:'USB-C cables ×3',g:[],n:null},
+    {t:'Reading material ×1–2 books',g:[],n:null},
+  ]},
+  {id:'s8',title:'Electronics & navigation',icon:'ti-device-mobile',items:[
+    {t:'iPhone + offline maps',g:['crit'],n:null},
+    {t:'Satellite communicator (Garmin inReach Mini / SPOT)',g:['crit','seq'],n:null},
+    {t:'Solar panel',g:['seq'],n:null},
+    {t:'LED lantern',g:['seq'],n:null},
+    {t:'Multi-port USB-C wall charger',g:[],n:null},
+    {t:'Car charger',g:[],n:null},
+    {t:'Apple Watch + charger',g:['jer'],n:null},
+    {t:'AirPods / earbuds',g:[],n:null},
+    {t:'Offline content downloaded (shows, podcasts)',g:['crit'],n:null},
+    {t:'Backup battery 10,000mAh',g:[],n:null},
+    {t:'Camera / extra phone lens',g:[],n:null},
+    {t:'Waterproof phone pouch',g:[],n:null},
+  ]},
+  {id:'s9',title:'Comfort & Maddy',icon:'ti-heart',items:[
+    {t:'Noise-canceling headphones',g:['crit','mad'],n:null},
+    {t:'Familiar sleep pillow / blanket / scent',g:['mad'],n:null},
+    {t:'Loose day plan shared in advance',g:['crit','mad'],n:'Print and share before departure'},
+    {t:'Quiet anchor activities (coloring, game, book)',g:['mad'],n:null},
+    {t:'Extra layers easily accessible in car',g:['mad'],n:null},
+    {t:'Grounding object / fidget',g:['mad'],n:null},
+    {t:'Comfort food items from home',g:['mad'],n:null},
+    {t:'Agreed signal for overstimulation',g:['crit','mad'],n:'Decide on a word or gesture before leaving'},
+    {t:'Downtime buffer each day — no back-to-back plans',g:['mad'],n:null},
+    {t:"Maddy's music / podcast downloaded offline",g:['mad'],n:null},
+  ]},
+  {id:'s10',title:'Admin & logistics',icon:'ti-clipboard-check',items:[
+    {t:'Hotel confirmation — Groveland',g:['crit'],n:null},
+    {t:'Curry Village canvas tent confirmation',g:['crit'],n:null},
+    {t:'Sequoia campsite confirmation',g:['crit'],n:null},
+    {t:'Yosemite timed-entry vehicle reservation (recreation.gov)',g:['crit'],n:'Book immediately if not done'},
+    {t:'Sequoia / Kings Canyon entry reservation check (recreation.gov)',g:['crit'],n:null},
+    {t:'America the Beautiful Pass (or cash $35 per park)',g:[],n:null},
+    {t:'Printed emergency contacts',g:[],n:null},
+    {t:'California park maps (printed)',g:[],n:null},
+    {t:'Credit cards + cash',g:[],n:null},
+    {t:"Driver's license / IDs \xd73",g:[],n:null},
+    {t:'Trip insurance (if applicable)',g:[],n:null},
+  ]},
+  {id:'s11',title:'Car organization',icon:'ti-car',items:[
+    {t:'Cooler (loaded for full trip)',g:[],n:null},
+    {t:'Collapsible wagon / garden cart',g:['seq'],n:'Walk-in site at Lodgepole — short carry from parking but multiple loads; wagon is a huge help'},
+    {t:'Snack bag (front-seat accessible)',g:[],n:null},
+    {t:'Printed directions — all 3 legs',g:['crit'],n:'Sequoia = zero cell service'},
+    {t:'Jump pack / car emergency kit',g:[],n:null},
+    {t:'Bungee cords \xd76',g:[],n:null},
+    {t:'Trash bags \xd73',g:[],n:null},
+    {t:'Wet wipes (car surfaces)',g:[],n:null},
+    {t:'Offline maps downloaded on iPhone',g:[],n:null},
+    {t:'Extra 1-gallon water jug',g:[],n:null},
+    {t:'Car blankets for stops / naps',g:[],n:null},
+  ]},
+];
+
+// Stamp stable IDs onto every default item
+DEFS.forEach(sec => sec.items.forEach((item, i) => { item.id = `${sec.id}_${i}`; }));
+
+/* ─── Tag map ─────────────────────────────────────────────────────────── */
+const TM = {
+  crit:{c:'t-crit',l:'● Critical'},
+  seq:{c:'t-seq', l:'Sequoia only'},
+  cur:{c:'t-cur', l:'Curry Village'},
+  jer:{c:'t-jer', l:'Jeremy'},
+  dav:{c:'t-dav', l:'David'},
+  mad:{c:'t-mad', l:'Maddy'},
+};
+
+/* ─── State ───────────────────────────────────────────────────────────── */
+const STORE = 'sierra-packing-jun2026';
+let sections, openSet = new Set(), checkedSet = new Set(), editMode = false;
+
+function deepCopy(o) { return JSON.parse(JSON.stringify(o)); }
+function mktag(k)    { const m = TM[k]; return m ? `<span class="tag ${m.c}">${m.l}</span>` : ''; }
+
+/* ─── Init ────────────────────────────────────────────────────────────── */
+function init() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(STORE));
+    if (saved && Array.isArray(saved.sections)) {
+      sections   = saved.sections;
+      checkedSet = new Set(saved.checked || []);
+      openSet    = new Set(saved.open    || []);
+    } else throw 0;
+  } catch(e) {
+    sections = deepCopy(DEFS);
+  }
+  render();
+}
+
+/* ─── Render ──────────────────────────────────────────────────────────── */
+function render() {
+  const sy = window.scrollY;
+  const sc = document.getElementById('sc');
+  sc.innerHTML = '';
+  sections.forEach(sec => {
+    const isOpen = openSet.has(sec.id);
+    const chk    = sec.items.filter(item => checkedSet.has(item.id)).length;
+    const tot    = sec.items.length;
+    const pct    = tot ? Math.round(chk / tot * 100) : 0;
+
+    const wrap = document.createElement('div');
+    wrap.className = 'sec-wrap';
+
+    const hdr = document.createElement('div');
+    hdr.className = 'sec-hdr';
+    hdr.setAttribute('role', 'button');
+    hdr.setAttribute('aria-expanded', String(isOpen));
+    hdr.innerHTML = `
+      <i class="ti ${sec.icon}" style="font-size:16px;color:var(--tx1)" aria-hidden="true"></i>
+      <span style="font-size:14px;font-weight:500;flex:1;color:var(--tx0)">${sec.title}</span>
+      <span id="${sec.id}-c" style="font-size:12px;color:var(--tx1);margin-right:4px">${chk} / ${tot}</span>
+      <div style="width:52px;height:4px;background:var(--bdr);border-radius:9999px;overflow:hidden;margin-right:8px">
+        <div id="${sec.id}-b" style="height:100%;background:var(--accent);border-radius:9999px;width:${pct}%"></div>
+      </div>
+      <i class="ti ti-chevron-down" id="${sec.id}-v"
+         style="font-size:14px;color:var(--tx2);transform:${isOpen ? 'rotate(180deg)' : ''}"
+         aria-hidden="true"></i>
+    `;
+
+    const body = document.createElement('div');
+    body.id = `${sec.id}-bd`;
+    body.style.display = isOpen ? 'block' : 'none';
+
+    sec.items.forEach(item => body.appendChild(mkRow(item, sec.id)));
+    if (editMode) body.appendChild(mkAddArea(sec.id));
+
+    hdr.addEventListener('click', () => {
+      const nowOpen = body.style.display !== 'none';
+      body.style.display = nowOpen ? 'none' : 'block';
+      if (nowOpen) openSet.delete(sec.id); else openSet.add(sec.id);
+      document.getElementById(`${sec.id}-v`).style.transform = nowOpen ? '' : 'rotate(180deg)';
+      hdr.setAttribute('aria-expanded', String(!nowOpen));
+      save();
+    });
+
+    wrap.appendChild(hdr);
+    wrap.appendChild(body);
+    sc.appendChild(wrap);
+  });
+  upd();
+  window.scrollTo(0, sy);
+}
+
+/* ─── Item row ────────────────────────────────────────────────────────── */
+function mkRow(item, secId) {
+  const row = document.createElement('div');
+  row.className = 'irow';
+  row.id = `row-${item.id}`;
+  const isChk = checkedSet.has(item.id);
+  if (isChk) row.style.opacity = '0.4';
+
+  const tags = item.g.map(mktag).join('');
+  const note = item.n ? `<div style="font-size:11px;color:var(--tx2);margin-top:2px">${item.n}</div>` : '';
+
+  row.innerHTML = `
+    <input type="checkbox" id="${item.id}" ${isChk ? 'checked' : ''}>
+    <label for="${item.id}" style="flex:1">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:5px">
+        <span style="font-size:13px;color:var(--tx0)">${item.t}</span>${tags}
+      </div>${note}
+    </label>
+    ${editMode ? `<button class="del-btn" aria-label="Remove ${item.t}"><i class="ti ti-x" aria-hidden="true"></i></button>` : ''}
+  `;
+
+  row.querySelector('input').addEventListener('change', function() {
+    row.style.opacity = this.checked ? '0.4' : '1';
+    if (this.checked) checkedSet.add(item.id); else checkedSet.delete(item.id);
+    upd(); save();
+  });
+
+  if (editMode) {
+    row.querySelector('.del-btn').addEventListener('click', e => {
+      e.stopPropagation();
+      const sec = sections.find(s => s.id === secId);
+      if (sec) {
+        sec.items = sec.items.filter(i => i.id !== item.id);
+        checkedSet.delete(item.id);
+        row.remove();
+        upd(); save();
+      }
+    });
+  }
+  return row;
+}
+
+/* ─── Add-item area ───────────────────────────────────────────────────── */
+function mkAddArea(secId) {
+  const area = document.createElement('div');
+  area.className = 'add-area';
+  area.id = `${secId}-addarea`;
+
+  const pills = Object.entries(TM).map(([k, m]) =>
+    `<button type="button" class="tag-pill" data-tag="${k}">${m.l}</button>`
+  ).join('');
+
+  area.innerHTML = `
+    <div class="add-row">
+      <input type="text" id="${secId}-txt" class="add-txt" placeholder="New item…">
+      <button type="button" class="btn" id="${secId}-go">Add</button>
+    </div>
+    <div class="tag-pills">${pills}</div>
+    <input type="text" id="${secId}-note" class="add-note" placeholder="Note (optional)">
+    <p class="edit-hint">Click tags to attach them · press Enter or click Add</p>
+  `;
+
+  area.querySelectorAll('.tag-pill').forEach(p =>
+    p.addEventListener('click', () => p.classList.toggle('on'))
+  );
+  const doAdd = () => addItem(secId, area);
+  area.querySelector(`#${secId}-go`).addEventListener('click', doAdd);
+  area.querySelector(`#${secId}-txt`).addEventListener('keydown', e => { if (e.key === 'Enter') doAdd(); });
+  return area;
+}
+
+function addItem(secId, area) {
+  const txtEl  = area.querySelector(`#${secId}-txt`);
+  const noteEl = area.querySelector(`#${secId}-note`);
+  const text   = txtEl.value.trim();
+  if (!text) { txtEl.focus(); return; }
+
+  const activeTags = [...area.querySelectorAll('.tag-pill.on')].map(p => p.dataset.tag);
+  const newItem = {
+    t:  text,
+    g:  activeTags,
+    n:  noteEl.value.trim() || null,
+    id: `${secId}_n${Date.now()}`,
+  };
+
+  const sec = sections.find(s => s.id === secId);
+  if (!sec) return;
+  sec.items.push(newItem);
+  openSet.add(secId);
+  save();
+
+  // Splice row into DOM before the add area — no full re-render needed
+  const newRow = mkRow(newItem, secId);
+  area.parentNode.insertBefore(newRow, area);
+
+  // Reset form
+  txtEl.value = '';
+  noteEl.value = '';
+  area.querySelectorAll('.tag-pill.on').forEach(p => p.classList.remove('on'));
+  txtEl.focus();
+
+  upd();
+  newRow.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+/* ─── Edit mode toggle ────────────────────────────────────────────────── */
+function toggleEdit() {
+  editMode = !editMode;
+  document.getElementById('edit-btn').innerHTML = editMode
+    ? '<i class="ti ti-check" aria-hidden="true"></i> Done'
+    : '<i class="ti ti-edit" aria-hidden="true"></i> Edit list';
+  document.getElementById('restore-btn').style.display = editMode ? '' : 'none';
+  render();
+}
+
+/* ─── Counts / progress ───────────────────────────────────────────────── */
+function upd() {
+  let tc = 0, tt = 0;
+  sections.forEach(sec => {
+    const tot = sec.items.length;
+    const chk = sec.items.filter(item => checkedSet.has(item.id)).length;
+    tc += chk; tt += tot;
+    const p = tot ? Math.round(chk / tot * 100) : 0;
+    const cEl = document.getElementById(`${sec.id}-c`);
+    const bEl = document.getElementById(`${sec.id}-b`);
+    if (cEl) cEl.textContent = `${chk} / ${tot}`;
+    if (bEl) bEl.style.width = p + '%';
+  });
+  const p = tt ? Math.round(tc / tt * 100) : 0;
+  document.getElementById('ov-c').textContent = `${tc} / ${tt} packed`;
+  document.getElementById('ov-b').style.width = p + '%';
+}
+
+/* ─── Persistence ─────────────────────────────────────────────────────── */
+function save() {
+  try {
+    localStorage.setItem(STORE, JSON.stringify({
+      sections,
+      checked: [...checkedSet],
+      open:    [...openSet],
+    }));
+  } catch(e) {}
+}
+
+function resetChecked() {
+  if (!confirm('Clear all checkmarks? Your custom items will be kept.')) return;
+  checkedSet.clear();
+  save(); render();
+}
+
+function restoreDefaults() {
+  if (!confirm('Restore the original list? All custom edits and checkmarks will be lost.')) return;
+  sections = deepCopy(DEFS);
+  checkedSet.clear();
+  openSet.clear();
+  try { localStorage.removeItem(STORE); } catch(e) {}
+  render();
+}
+
+init();
+</script>
+</body>
+</html>
