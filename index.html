@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sierra Nevada \u2014 Jun 7\u201312</title>
+<title>Sierra Nevada — Jun 7–12</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
 <style>
 :root{
@@ -85,14 +85,14 @@ input[type="checkbox"]{accent-color:var(--accent);cursor:pointer;flex-shrink:0;m
 </head>
 <body>
 <div class="container">
-  <h1 style="font-size:20px;font-weight:500;color:var(--tx0);margin-bottom:2px">Sierra Nevada \u2014 Jun 7\u201312</h1>
-  <p style="font-size:13px;color:var(--tx1);margin-bottom:1.25rem">Jeremy, David, Maddy \xb7 Groveland \u2192 Yosemite Valley \u2192 Sequoia / Lodgepole (car camping, walk-in)</p>
+  <h1 style="font-size:20px;font-weight:500;color:var(--tx0);margin-bottom:2px">Sierra Nevada — Jun 7–12</h1>
+  <p style="font-size:13px;color:var(--tx1);margin-bottom:1.25rem">Jeremy, David, Maddy · Groveland → Yosemite Valley → Sequoia / Lodgepole (car camping, walk-in)</p>
 
   <div class="tabs">
     <button class="tab-btn active" data-tab="pack" onclick="switchTab('pack')">Packing list</button>
     <button class="tab-btn" data-tab="prep" onclick="switchTab('prep')">Prep plan</button>
-    <button class="tab-btn" data-tab="seq" onclick="switchTab('seq')">Sequoia activities</button>
     <button class="tab-btn" data-tab="yos" onclick="switchTab('yos')">Yosemite activities</button>
+    <button class="tab-btn" data-tab="seq" onclick="switchTab('seq')">Sequoia activities</button>
   </div>
 
   <!-- PACKING -->
@@ -113,7 +113,7 @@ input[type="checkbox"]{accent-color:var(--accent);cursor:pointer;flex-shrink:0;m
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1.25rem;align-items:center">
       <span style="font-size:12px;color:var(--tx1)">Tags:</span>
-      <span class="tag t-crit">\u25cf Critical</span><span class="tag t-jer">Jeremy</span><span class="tag t-dav">David</span><span class="tag t-mad">Maddy</span><span class="tag t-seq">Sequoia only</span><span class="tag t-cur">Curry Village</span>
+      <span class="tag t-crit">● Critical</span><span class="tag t-jer">Jeremy</span><span class="tag t-dav">David</span><span class="tag t-mad">Maddy</span><span class="tag t-seq">Sequoia only</span><span class="tag t-cur">Curry Village</span>
     </div>
     <div id="sc"></div>
   </div>
@@ -121,7 +121,7 @@ input[type="checkbox"]{accent-color:var(--accent);cursor:pointer;flex-shrink:0;m
   <!-- PREP -->
   <div id="panel-prep" style="display:none">
     <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:1.25rem">
-      <span style="font-size:13px;color:var(--tx1)">Check off tasks as you go \u2014 saves automatically.</span>
+      <span style="font-size:13px;color:var(--tx1)">Check off tasks as you go — saves automatically.</span>
       <button class="btn" onclick="resetPrep()"><i class="ti ti-refresh" aria-hidden="true"></i> Reset</button>
     </div>
     <div style="margin-bottom:1.25rem">
@@ -138,20 +138,20 @@ input[type="checkbox"]{accent-color:var(--accent);cursor:pointer;flex-shrink:0;m
 
   <!-- SEQUOIA ACTIVITIES -->
   <div id="panel-seq" style="display:none">
-    <p style="font-size:13px;color:var(--tx1);margin-bottom:1.25rem">Sequoia &amp; Kings Canyon \u2014 Wed Jun 10 afternoon through Fri Jun 12 morning.</p>
+    <p style="font-size:13px;color:var(--tx1);margin-bottom:1.25rem">Sequoia &amp; Kings Canyon — Wed Jun 10 afternoon through Fri Jun 12 morning.</p>
     <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1.25rem;align-items:center">
       <span style="font-size:12px;color:var(--tx1)">Tags:</span>
-      <span class="tag at-hard">Hard</span><span class="tag at-mod">Moderate</span><span class="tag at-easy">Easy</span><span class="tag at-top">\u2605 Top pick</span><span class="tag at-june">Best in June</span><span class="tag at-mad">Great for Maddy</span><span class="tag at-book">Book ahead</span><span class="tag at-free">Free</span>
+      <span class="tag at-hard">Hard</span><span class="tag at-mod">Moderate</span><span class="tag at-easy">Easy</span><span class="tag at-top">★ Top pick</span><span class="tag at-june">Best in June</span><span class="tag at-mad">Great for Maddy</span><span class="tag at-book">Book ahead</span><span class="tag at-free">Free</span>
     </div>
     <div id="seq-sc"></div>
   </div>
 
   <!-- YOSEMITE ACTIVITIES -->
   <div id="panel-yos" style="display:none">
-    <p style="font-size:13px;color:var(--tx1);margin-bottom:1.25rem">Yosemite Valley \u2014 Mon Jun 8 through Wed Jun 10 midday.</p>
+    <p style="font-size:13px;color:var(--tx1);margin-bottom:1.25rem">Yosemite Valley — Mon Jun 8 through Wed Jun 10 midday.</p>
     <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1.25rem;align-items:center">
       <span style="font-size:12px;color:var(--tx1)">Tags:</span>
-      <span class="tag at-hard">Hard</span><span class="tag at-mod">Moderate</span><span class="tag at-easy">Easy</span><span class="tag at-top">\u2605 Top pick</span><span class="tag at-june">Best in June</span><span class="tag at-mad">Great for Maddy</span><span class="tag at-book">Book ahead</span><span class="tag at-free">Free</span>
+      <span class="tag at-hard">Hard</span><span class="tag at-mod">Moderate</span><span class="tag at-easy">Easy</span><span class="tag at-top">★ Top pick</span><span class="tag at-june">Best in June</span><span class="tag at-mad">Great for Maddy</span><span class="tag at-book">Book ahead</span><span class="tag at-free">Free</span>
     </div>
     <div id="yos-sc"></div>
   </div>
