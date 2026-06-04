@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sierra Nevada — Jun 7–12</title>
+<title>Sierra Nevada \u2014 Jun 7\u201312</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
 <style>
 :root{
@@ -31,7 +31,6 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 body{font-family:var(--f);background:var(--bg2);color:var(--tx0);line-height:1.5;padding:2rem 1rem 4rem;min-height:100vh}
 .container{max-width:680px;margin:0 auto;background:var(--bg0);border-radius:var(--r12);padding:1.5rem;border:0.5px solid var(--bdr)}
-/* Packing tags */
 .tag{font-size:10px;border-radius:4px;padding:2px 7px;white-space:nowrap;display:inline-block}
 .t-crit{background:var(--bg-danger);color:var(--tx-danger)}
 .t-seq{background:var(--bg-warning);color:var(--tx-warning)}
@@ -39,7 +38,6 @@ body{font-family:var(--f);background:var(--bg2);color:var(--tx0);line-height:1.5
 .t-jer{background:var(--bg-info);color:var(--tx-info)}
 .t-dav{background:#FAEEDA;color:#633806}
 .t-mad{background:#EEEDFE;color:#3C3489}
-/* Activity tags */
 .at-hard{background:var(--bg-danger);color:var(--tx-danger)}
 .at-mod{background:var(--bg-warning);color:var(--tx-warning)}
 .at-easy{background:var(--bg-success);color:var(--tx-success)}
@@ -48,30 +46,24 @@ body{font-family:var(--f);background:var(--bg2);color:var(--tx0);line-height:1.5
 .at-top{background:#F0E6FD;color:#5B1D8B}
 .at-mad{background:#EEEDFE;color:#3C3489}
 .at-june{background:#DCFCE7;color:#14532D}
-/* Tabs */
-.tabs{display:flex;border-bottom:0.5px solid var(--bdr2);margin-bottom:1.25rem}
-.tab-btn{font-family:var(--f);font-size:13px;font-weight:500;color:var(--tx1);background:none;border:none;padding:8px 14px 9px;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-0.5px;transition:color 0.15s,border-color 0.15s}
+.tabs{display:flex;border-bottom:0.5px solid var(--bdr2);margin-bottom:1.25rem;overflow-x:auto}
+.tab-btn{font-family:var(--f);font-size:13px;font-weight:500;color:var(--tx1);background:none;border:none;padding:8px 12px 9px;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-0.5px;white-space:nowrap;transition:color 0.15s,border-color 0.15s;flex-shrink:0}
 .tab-btn.active{color:var(--tx0);border-bottom-color:var(--accent)}
 .tab-btn:hover:not(.active){color:var(--tx0)}
-/* Shared sections */
 .sec-wrap{border:0.5px solid var(--bdr);border-radius:var(--r12);margin-bottom:10px;overflow:hidden}
 .sec-hdr{display:flex;align-items:center;gap:10px;padding:10px 14px;cursor:pointer;user-select:none;background:var(--bg1);transition:opacity 0.15s}
 .sec-hdr:hover{opacity:0.75}
-/* Packing rows */
 .irow{display:flex;align-items:flex-start;gap:10px;padding:8px 14px;border-bottom:0.5px solid var(--bdr);transition:opacity 0.15s,background 0.1s}
 .irow:last-child{border-bottom:none}
 .irow:hover{background:var(--bg1)}
 .irow label{cursor:pointer;flex:1}
 input[type="checkbox"]{accent-color:var(--accent);cursor:pointer;flex-shrink:0;margin-top:3px}
-/* Activity rows */
 .arow{padding:10px 14px;border-bottom:0.5px solid var(--bdr)}
 .arow:last-child{border-bottom:none}
-/* Buttons */
 .btn{display:inline-flex;align-items:center;gap:5px;font-family:var(--f);font-size:12px;color:var(--tx1);background:transparent;border:0.5px solid var(--bdr2);border-radius:var(--r8);padding:5px 10px;cursor:pointer;transition:background 0.15s}
 .btn:hover{background:var(--bg1)}
 .btn-danger{color:var(--tx-danger);border-color:var(--bg-danger)}
 .btn-danger:hover{background:var(--bg-danger)}
-/* Edit mode */
 .del-btn{background:none;border:none;cursor:pointer;color:var(--tx2);padding:3px 4px;border-radius:var(--r8);line-height:1;flex-shrink:0;font-size:13px;transition:color 0.15s;font-family:var(--f);margin-top:1px}
 .del-btn:hover{color:var(--tx-danger)}
 .add-area{padding:10px 14px;background:var(--bg1)}
@@ -94,16 +86,17 @@ input[type="checkbox"]{accent-color:var(--accent);cursor:pointer;flex-shrink:0;m
 <body>
 <div class="container">
   <h1 style="font-size:20px;font-weight:500;color:var(--tx0);margin-bottom:2px">Sierra Nevada \u2014 Jun 7\u201312</h1>
-  <p style="font-size:13px;color:var(--tx1);margin-bottom:1.25rem">Jeremy, David, Maddy &nbsp;\xb7&nbsp; Groveland \u2192 Yosemite Valley \u2192 Sequoia / Lodgepole (car camping, walk-in)</p>
+  <p style="font-size:13px;color:var(--tx1);margin-bottom:1.25rem">Jeremy, David, Maddy \xb7 Groveland \u2192 Yosemite Valley \u2192 Sequoia / Lodgepole (car camping, walk-in)</p>
 
   <div class="tabs">
-    <button class="tab-btn active" data-tab="packing" onclick="switchTab('packing')">Packing list</button>
+    <button class="tab-btn active" data-tab="pack" onclick="switchTab('pack')">Packing list</button>
     <button class="tab-btn" data-tab="prep" onclick="switchTab('prep')">Prep plan</button>
-    <button class="tab-btn" data-tab="acts" onclick="switchTab('acts')">Activities</button>
+    <button class="tab-btn" data-tab="seq" onclick="switchTab('seq')">Sequoia activities</button>
+    <button class="tab-btn" data-tab="yos" onclick="switchTab('yos')">Yosemite activities</button>
   </div>
 
-  <!-- PACKING PANEL -->
-  <div id="panel-packing">
+  <!-- PACKING -->
+  <div id="panel-pack">
     <div style="display:flex;justify-content:flex-end;gap:6px;flex-wrap:wrap;margin-bottom:1.25rem">
       <button class="btn btn-danger" id="restore-btn" onclick="restoreDefaults()" style="display:none"><i class="ti ti-rotate-clockwise" aria-hidden="true"></i> Restore defaults</button>
       <button class="btn" onclick="resetChecked()"><i class="ti ti-refresh" aria-hidden="true"></i> Reset</button>
@@ -120,17 +113,12 @@ input[type="checkbox"]{accent-color:var(--accent);cursor:pointer;flex-shrink:0;m
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1.25rem;align-items:center">
       <span style="font-size:12px;color:var(--tx1)">Tags:</span>
-      <span class="tag t-crit">\u25cf Critical</span>
-      <span class="tag t-jer">Jeremy</span>
-      <span class="tag t-dav">David</span>
-      <span class="tag t-mad">Maddy</span>
-      <span class="tag t-seq">Sequoia only</span>
-      <span class="tag t-cur">Curry Village</span>
+      <span class="tag t-crit">\u25cf Critical</span><span class="tag t-jer">Jeremy</span><span class="tag t-dav">David</span><span class="tag t-mad">Maddy</span><span class="tag t-seq">Sequoia only</span><span class="tag t-cur">Curry Village</span>
     </div>
     <div id="sc"></div>
   </div>
 
-  <!-- PREP PANEL -->
+  <!-- PREP -->
   <div id="panel-prep" style="display:none">
     <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:1.25rem">
       <span style="font-size:13px;color:var(--tx1)">Check off tasks as you go \u2014 saves automatically.</span>
@@ -148,26 +136,29 @@ input[type="checkbox"]{accent-color:var(--accent);cursor:pointer;flex-shrink:0;m
     <div id="prep-sc"></div>
   </div>
 
-  <!-- ACTIVITIES PANEL -->
-  <div id="panel-acts" style="display:none">
+  <!-- SEQUOIA ACTIVITIES -->
+  <div id="panel-seq" style="display:none">
+    <p style="font-size:13px;color:var(--tx1);margin-bottom:1.25rem">Sequoia &amp; Kings Canyon \u2014 Wed Jun 10 afternoon through Fri Jun 12 morning.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1.25rem;align-items:center">
+      <span style="font-size:12px;color:var(--tx1)">Tags:</span>
+      <span class="tag at-hard">Hard</span><span class="tag at-mod">Moderate</span><span class="tag at-easy">Easy</span><span class="tag at-top">\u2605 Top pick</span><span class="tag at-june">Best in June</span><span class="tag at-mad">Great for Maddy</span><span class="tag at-book">Book ahead</span><span class="tag at-free">Free</span>
+    </div>
+    <div id="seq-sc"></div>
+  </div>
+
+  <!-- YOSEMITE ACTIVITIES -->
+  <div id="panel-yos" style="display:none">
     <p style="font-size:13px;color:var(--tx1);margin-bottom:1.25rem">Yosemite Valley \u2014 Mon Jun 8 through Wed Jun 10 midday.</p>
     <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1.25rem;align-items:center">
       <span style="font-size:12px;color:var(--tx1)">Tags:</span>
-      <span class="tag at-hard">Hard</span>
-      <span class="tag at-mod">Moderate</span>
-      <span class="tag at-easy">Easy</span>
-      <span class="tag at-top">\u2605 Top pick</span>
-      <span class="tag at-june">Best in June</span>
-      <span class="tag at-mad">Great for Maddy</span>
-      <span class="tag at-book">Book ahead</span>
-      <span class="tag at-free">Free</span>
+      <span class="tag at-hard">Hard</span><span class="tag at-mod">Moderate</span><span class="tag at-easy">Easy</span><span class="tag at-top">\u2605 Top pick</span><span class="tag at-june">Best in June</span><span class="tag at-mad">Great for Maddy</span><span class="tag at-book">Book ahead</span><span class="tag at-free">Free</span>
     </div>
-    <div id="acts-sc"></div>
+    <div id="yos-sc"></div>
   </div>
 </div>
 
 <script>
-/* ========= PACKING DATA ================================================ */
+/* ===== PACKING DATA ===================================================== */
 const DEFS=[
   {id:'s1',title:'Clothing & footwear',icon:'ti-shirt',items:[
     {t:'Rain jacket',g:['crit'],n:null},
@@ -182,7 +173,7 @@ const DEFS=[
     {t:'Hiking boots',g:['dav'],n:null},
     {t:'Comfortable hiking shoes',g:['mad'],n:null},
     {t:'Camp sandals',g:[],n:null},
-    {t:'Shower shoes / flip-flops',g:['cur'],n:'Shared shower house at Curry Village \u2014 24 hrs'},
+    {t:'Shower shoes / flip-flops',g:['cur','seq'],n:'Curry Village: shared shower house. Lodgepole Village: coin-op showers 1/4 mile from camp'},
     {t:'Lightweight gloves',g:['seq'],n:null},
     {t:'Beanie',g:['seq'],n:null},
     {t:'Swimsuit (Groveland pool / Curry Village pool)',g:[],n:null},
@@ -193,10 +184,10 @@ const DEFS=[
   ]},
   {id:'s2',title:'Sleep & shelter',icon:'ti-tent',items:[
     {t:'3-person tent',g:['crit','seq'],n:null},
-    {t:'30\xb0F sleeping bags \xd73',g:['crit','seq'],n:'Curry Village provides bedding \u2014 sleeping bags for Sequoia only'},
+    {t:'30\xb0F sleeping bags \xd73',g:['crit','seq'],n:'Curry Village provides bedding \u2014 bags for Sequoia only. Nights at Lodgepole (6,700 ft) can drop below 40\xb0F in June.'},
     {t:'Sleeping pads / mats \xd73',g:['seq'],n:null},
     {t:'Compressible pillows \xd73',g:[],n:null},
-    {t:'Extra blanket',g:['cur'],n:'Curry Village is cold at night \u2014 extra blankets available at front desk too'},
+    {t:'Extra blanket',g:['cur'],n:'Curry Village is cold at night \u2014 extra blankets at front desk too'},
     {t:'Earplugs',g:['cur'],n:'Canvas tent walls \u2014 neighbor noise is real; Curry Village officially recommends these'},
     {t:'Eye mask',g:[],n:null},
   ]},
@@ -206,8 +197,8 @@ const DEFS=[
     {t:'Water filter (Sawyer Squeeze)',g:['crit'],n:null},
     {t:'DEET / Picaridin insect repellent \xd73',g:['crit'],n:null},
     {t:'AllTrails offline maps downloaded',g:['crit'],n:null},
-    {t:'Microspikes / traction',g:['seq'],n:'Check early-June snow conditions'},
-    {t:'Bear spray',g:['seq'],n:null},
+    {t:'Microspikes / traction',g:['seq'],n:'Check early-June snow conditions for higher trails'},
+    {t:'Bear spray',g:['seq'],n:'For trail hiking in Sequoia \u2014 bears are active'},
     {t:'Head net (mosquito season)',g:[],n:null},
     {t:'Headlamp \xd73 + extra batteries',g:[],n:null},
     {t:'Sunscreen SPF 50+ \xd73',g:['crit'],n:null},
@@ -219,17 +210,19 @@ const DEFS=[
     {t:'Trekking poles',g:['dav'],n:null},
   ]},
   {id:'s4',title:'Camp kitchen & food',icon:'ti-soup',items:[
-    {t:'Camp stove + fuel (Coleman 2-burner or similar)',g:['seq'],n:'Car camping \u2014 no need to limit to backpacking stove'},
+    {t:'Camp stove + fuel (Coleman 2-burner or similar)',g:['seq'],n:'Car camping \u2014 no backpacking stove needed'},
+    {t:'Lighter + waterproof matches',g:['seq'],n:'Fire ring + grate at every Lodgepole site. Buy firewood at Lodgepole Village market \u2014 don\'t bring from home (CA transport regs)'},
     {t:'Camp cooking pot / pan set',g:['seq'],n:null},
     {t:'Utensils / spork set \xd73',g:[],n:null},
     {t:'Bowls + cups \xd73',g:['seq'],n:null},
+    {t:'Camp chairs \xd72\u20133',g:['seq'],n:'Picnic table at every Lodgepole site; chairs for around the fire ring'},
     {t:'Use food storage locker each night \u2014 Sequoia',g:['crit','seq'],n:'Lodgepole provides metal lockers \u2014 all food, trash, and scented items must go in overnight'},
-    {t:'Use bear locker each night \u2014 Curry Village',g:['crit','cur'],n:'All food, coolers, drinks, toiletries, toothpaste, sunscreen, and trash go in when not actively used. Car after dark = violation. Fines up to $5,000.'},
+    {t:'Store all food + scented items in bear locker \u2014 Curry Village',g:['crit','cur'],n:'All food, coolers, drinks, toiletries, toothpaste, sunscreen, trash when not actively used. No food in tent or car after dark. Fines up to $5,000.'},
     {t:'Water purification tabs (backup)',g:[],n:null},
     {t:'Pasture-raised hard-boiled eggs (eat days 1\u20132)',g:[],n:null},
     {t:'Organic bison jerky',g:[],n:null},
     {t:'Wild-caught salmon / sardine pouches',g:[],n:null},
-    {t:'Organic mixed nuts \u2014 mango-free',g:['crit','dav'],n:'David: avocado + mango allergy \u2014 check label'},
+    {t:'Organic mixed nuts \u2014 mango-free',g:['crit','dav'],n:'David: avocado + mango allergy \u2014 check every label'},
     {t:'LMNT electrolyte packets',g:[],n:null},
     {t:'Organic dark chocolate',g:[],n:null},
     {t:'Dried fruit mix \u2014 mango-free',g:['crit','dav'],n:'Read label before packing'},
@@ -254,14 +247,14 @@ const DEFS=[
     {t:'Full first aid kit',g:['crit'],n:null},
     {t:'Ace bandage',g:['jer'],n:'SI joint insurance'},
     {t:'Baby wipes \xd72 packs',g:[],n:null},
-    {t:'TP + trowel (cat hole kit)',g:['seq'],n:null},
+    {t:'TP + trowel (cat hole kit)',g:['seq'],n:'Lodgepole has flush toilets at camp but good to have for trail'},
     {t:'Biodegradable castile soap',g:[],n:null},
     {t:'Dry shampoo',g:[],n:null},
     {t:'Toothbrush + toothpaste \xd73',g:[],n:null},
     {t:'Sunscreen SPF 50+ (extra)',g:[],n:null},
     {t:'Lip balm SPF \xd73',g:[],n:null},
     {t:'Hand sanitizer \xd73',g:[],n:null},
-    {t:'Altitude / headache OTC meds',g:[],n:null},
+    {t:'Altitude / headache OTC meds',g:[],n:'Lodgepole is at 6,700 ft \u2014 altitude adjustment takes 1\u20132 days'},
     {t:'Prescription glasses / contacts',g:[],n:null},
     {t:'Deodorant \xd73',g:[],n:null},
     {t:'Extra electrolytes (hot hike days)',g:[],n:null},
@@ -288,7 +281,7 @@ const DEFS=[
     {t:'Reckoning capture journal (Leuchtturm1917 / Moleskine)',g:['crit','jer'],n:null},
     {t:'iPad + keyboard case',g:['crit','jer'],n:null},
     {t:'MacBook Air',g:['crit','jer'],n:null},
-    {t:'26,800mAh battery pack (Anker)',g:['crit','seq','jer'],n:'No power outlets in Curry Village tent June (heaters off before Memorial Day). Guest Lounge or dining area for charging.'},
+    {t:'26,800mAh battery pack (Anker)',g:['crit','seq','jer'],n:'No power at Sequoia. Curry Village: charge in Guest Lounge (no outlet in tent June \u2014 heaters off).'},
     {t:'Jetstream / G2 pens \xd73',g:[],n:null},
     {t:'Index cards \xd750',g:['jer'],n:null},
     {t:'Printed writing prompt list',g:['jer'],n:null},
@@ -327,6 +320,8 @@ const DEFS=[
     {t:'Curry Village canvas tent confirmation',g:['crit'],n:null},
     {t:'Lodgepole campsite confirmation',g:['crit'],n:null},
     {t:'Padlock for Curry Village bear locker',g:['cur'],n:'The bear lockers have no built-in lock'},
+    {t:'Quarters (small bag) for coin-op showers',g:['seq'],n:'Lodgepole Village showers \u2014 1/4 mile from campsite'},
+    {t:'Crystal Cave tickets booked',g:['crit','seq'],n:'2025 sold out \u2014 book NOW at sequoiaparksconservancy.org. No tickets at the cave. 50\xb0F inside, bring jackets.'},
     {t:'America the Beautiful Pass (or cash $35 per park)',g:[],n:null},
     {t:'Printed emergency contacts',g:[],n:null},
     {t:'California park maps (printed)',g:[],n:null},
@@ -336,9 +331,9 @@ const DEFS=[
   ]},
   {id:'s11',title:'Car organization',icon:'ti-car',items:[
     {t:'Cooler (loaded for full trip)',g:[],n:null},
-    {t:'Collapsible wagon / garden cart',g:['seq'],n:'Walk-in at Lodgepole \u2014 short carry from parking but multiple loads; wagon is essential'},
+    {t:'Collapsible wagon / garden cart',g:['seq'],n:'Walk-in at Lodgepole \u2014 short carry from parking; wagon essential for multiple loads'},
     {t:'Snack bag (front-seat accessible)',g:[],n:null},
-    {t:'Printed directions \u2014 all 3 legs',g:['crit'],n:'Sequoia = zero cell service'},
+    {t:'Printed directions \u2014 all 3 legs',g:['crit'],n:'Sequoia = zero cell service. Printed directions for that leg are non-negotiable.'},
     {t:'Jump pack / car emergency kit',g:[],n:null},
     {t:'Bungee cords \xd76',g:[],n:null},
     {t:'Trash bags \xd73',g:[],n:null},
@@ -350,24 +345,24 @@ const DEFS=[
 ];
 DEFS.forEach(sec=>sec.items.forEach((item,i)=>{item.id=`${sec.id}_${i}`;}));
 
-/* ========= PREP DATA =================================================== */
+/* ===== PREP DATA ======================================================== */
 const PREP=[
   {id:'p0',title:'Tonight \u2014 Fri May 29',icon:'ti-moon',items:[
-    {t:'Confirm Groveland hotel reservation',n:'Pull up confirmation email \u2014 verify dates, headcount, check-in time',id:'p0_0'},
+    {t:'Confirm Groveland hotel reservation',n:'Verify dates, headcount, check-in time',id:'p0_0'},
     {t:'Confirm Curry Village canvas tent reservation',n:'Dates, tent type, check-in window',id:'p0_1'},
-    {t:'Confirm Lodgepole campsite reservation',n:'Site number, walk-in, check-in time',id:'p0_2'},
+    {t:'Confirm Lodgepole campsite reservation',n:'Site number, walk-in details, check-in time',id:'p0_2'},
     {t:'Consider pre-purchasing digital park pass',n:'recreation.gov \u2014 not required but speeds up entry. America the Beautiful Pass ($80) covers both parks',id:'p0_3'},
     {t:"Give Maddy a heads-up the day plan is coming",n:"So the itinerary share this week doesn't come out of nowhere",id:'p0_4'},
   ]},
   {id:'p1',title:'Sat May 30 \u2014 gear audit + shopping',icon:'ti-shopping-bag',items:[
-    {t:'Set up or inspect tent',n:"Check poles, stakes, rain fly, footprint \u2014 do this now so there's time to replace anything",id:'p1_0'},
-    {t:'Check all 3 sleeping bags \u2014 confirm 30\xb0F rating',n:'Lodgepole nights in June can drop to mid-30s. Curry Village provides bedding.',id:'p1_1'},
+    {t:'Set up or inspect tent',n:"Check poles, stakes, rain fly, footprint",id:'p1_0'},
+    {t:'Check all 3 sleeping bags \u2014 confirm 30\xb0F rating',n:'Lodgepole nights can drop to the mid-30s. Curry Village provides bedding.',id:'p1_1'},
     {t:'Test headlamps \xd73 and replace batteries',n:'Bring a spare set for each',id:'p1_2'},
-    {t:'Inspect trekking poles \u2014 Jeremy and David',n:'Check locks, tips, and wrist straps',id:'p1_3'},
-    {t:'Bead-test rain jackets \xd73',n:"Sprinkle water \u2014 if it soaks in instead of beading off, re-proof with Nikwax",id:'p1_4'},
+    {t:'Inspect trekking poles \u2014 Jeremy and David',n:'Locks, tips, wrist straps',id:'p1_3'},
+    {t:'Bead-test rain jackets \xd73',n:"Sprinkle water \u2014 if it soaks in instead of beading, re-proof with Nikwax",id:'p1_4'},
     {t:'Check camp stove and fuel canisters',n:'Fire up the burner, confirm canisters have fuel',id:'p1_5'},
     {t:'Locate water filter or add to REI list',n:'Sawyer Squeeze recommended',id:'p1_6'},
-    {t:'Locate collapsible wagon or add to buy list',n:'Target, REI, or Amazon \u2014 if ordering online, do it today',id:'p1_7'},
+    {t:'Locate collapsible wagon or add to buy list',n:'Target, REI, or Amazon \u2014 order today if online',id:'p1_7'},
     {t:'REI: head nets \xd73',n:'~$8 each \u2014 June mosquitoes in Yosemite Valley are serious',id:'p1_8'},
     {t:'REI: bear spray',n:'~$40 \u2014 for Sequoia trail hiking',id:'p1_9'},
     {t:'REI: water filter if not owned',n:'Sawyer Squeeze ~$40',id:'p1_10'},
@@ -387,7 +382,7 @@ const PREP=[
   {id:'p2',title:'Sun May 31 \u2014 staging + overflow',icon:'ti-package',items:[
     {t:'Complete any Saturday shopping not finished',n:null,id:'p2_0'},
     {t:'Order anything online with lead time today',n:'Must arrive by Fri June 5 \u2014 today is the safe cutoff',id:'p2_1'},
-    {t:'Create physical staging area',n:'A corner or garage spot where all gear accumulates until pack day',id:'p2_2'},
+    {t:'Create physical staging area',n:'A corner or garage spot where all gear accumulates',id:'p2_2'},
     {t:'Move all located gear into staging area',n:'Tent, sleeping bags, pads, stove, kitchen, poles, wagon, hiking kit',id:'p2_3'},
   ]},
   {id:'p3',title:'Mon\u2013Tue June 1\u20132 \u2014 digital prep',icon:'ti-download',items:[
@@ -397,294 +392,163 @@ const PREP=[
     {t:"Download Maddy's offline music and podcasts",n:'Let her pick \u2014 downloaded, not streaming-dependent',id:'p3_3'},
     {t:'Download car entertainment for all 3 legs',n:'Shows, podcasts, audiobooks \u2014 nothing that needs a signal',id:'p3_4'},
     {t:"Draft Maddy's trip day plan",n:'Loose, one paragraph per day \u2014 hotel, Curry Village nights, Sequoia nights, transitions. Share by Wed',id:'p3_5'},
-    {t:"Book Maddy's Happy Isles art class for Tue June 9",n:'Register by 4pm June 8 at yosemite.org/art or call 209-379-2646. 4-hr outdoor class, various media. Check the week\u2019s medium first.',id:'p3_6'},
+    {t:"Book Maddy's Happy Isles art class for Tue June 9",n:'Register by 4pm June 8 at yosemite.org/art or call 209-379-2646. 4-hr outdoor class, various media.',id:'p3_6'},
+    {t:'Book Crystal Cave tour for Sequoia stay',n:'sequoiaparksconservancy.org/crystal-cave \u2014 2025 sold out, book immediately. No tickets at cave.',id:'p3_7'},
   ]},
   {id:'p4',title:'Wed\u2013Thu June 3\u20134 \u2014 Maddy prep + meds',icon:'ti-heart',items:[
-    {t:"Share Maddy's day plan with her",n:'Text, print, or Notes \u2014 whatever format she prefers. Give her time to read and ask questions before the 7th',id:'p4_0'},
-    {t:'Agree on overstimulation signal together',n:'A word or hand gesture she can use without having to explain anything in the moment',id:'p4_1'},
-    {t:'Count out 8 days of Losartan \u2014 label the bag',n:'6 trip days + 2 buffer. Do not leave this for the morning of',id:'p4_2'},
+    {t:"Share Maddy's day plan with her",n:'Give her time to read and ask questions before the 7th',id:'p4_0'},
+    {t:'Agree on overstimulation signal together',n:'A word or hand gesture she can use without explaining in the moment',id:'p4_1'},
+    {t:'Count out 8 days of Losartan \u2014 label the bag',n:'6 trip days + 2 buffer. Do not leave this for the morning of.',id:'p4_2'},
     {t:'Count out 8 days of Amlodipine \u2014 label the bag',n:'6 trip days + 2 buffer',id:'p4_3'},
     {t:'Restock first aid kit',n:'Bandages, antiseptic wipes, Compeed blisters, gauze, medical tape, tweezers, moleskin',id:'p4_4'},
     {t:'Check ibuprofen, antihistamine, melatonin stock',n:'Top up anything running low',id:'p4_5'},
-    {t:'Confirm satellite communicator rental pickup logistics',n:'Date, activation plan, and how to test it before departure',id:'p4_6'},
+    {t:'Confirm satellite communicator rental pickup logistics',n:'Date, activation plan, test before departure',id:'p4_6'},
   ]},
   {id:'p5',title:'Fri June 5 \u2014 active packing',icon:'ti-luggage',items:[
     {t:'Pack electronics bag',n:'USB-C chargers, cables, multi-port brick, Anker 26,800mAh, Apple Watch cable, AirPods, satellite communicator',id:'p5_0'},
     {t:"Pack Jeremy's art kit",n:'Watercolor set, A5 cold press pad, Aquash brushes, Micron fineliners, pencils, palette, masking tape, zip-lock bag',id:'p5_1'},
     {t:"Pack Jeremy's writing kit",n:'Reckoning journal, iPad + keyboard, MacBook Air, index cards \xd750, G2 pens, printed prompt list',id:'p5_2'},
     {t:'Pack clothing \u2014 all 3',n:'Layers, rain jackets, hiking pants \xd72, socks \xd75, underwear \xd75, sun hats, beanies, gloves, sleepwear, camp shoes, shower shoes',id:'p5_3'},
-    {t:'Pack non-perishable food into camp box',n:'Jerky, nuts, bars, oatmeal, LMNT, chocolate, pouches, MCT oil, coffee \u2014 everything dry',id:'p5_4'},
+    {t:'Pack non-perishable food into camp box',n:'Jerky, nuts, bars, oatmeal, LMNT, chocolate, pouches, MCT oil, coffee',id:'p5_4'},
     {t:'Pack hygiene bag',n:'Toothbrushes + paste \xd73, dry shampoo, baby wipes \xd72 packs, castile soap, sunscreen, lip balm, hand sanitizer, deodorant',id:'p5_5'},
     {t:"Pack Maddy's bag",n:'Headphones, familiar sleep items, grounding object / fidget, art supplies, comfort snacks, melatonin, downloaded content',id:'p5_6'},
-    {t:'Pack meds bag \u2014 keep accessible, not buried',n:'Losartan, Amlodipine, ibuprofen, antihistamines, altitude meds, ace bandage. In cabin bag, not trunk',id:'p5_7'},
+    {t:'Pack meds bag \u2014 accessible, not trunk',n:'Losartan, Amlodipine, ibuprofen, antihistamines, altitude meds, ace bandage',id:'p5_7'},
     {t:'Pack hiking kit',n:'3L hydration pack, sunscreen \xd73, head nets, trekking poles, water filter, whistle, topo maps, blister kit, gaiters',id:'p5_8'},
-    {t:'Pack sleep kit',n:'Compressible pillows \xd73, sleeping bags \xd73, sleeping pads \xd73 \u2014 already in staging area',id:'p5_9'},
+    {t:'Pack sleep kit',n:'Compressible pillows \xd73, sleeping bags \xd73, sleeping pads \xd73',id:'p5_9'},
   ]},
   {id:'p6',title:'Sat June 6 \u2014 day before',icon:'ti-calendar-check',items:[
-    {t:'Fresh food grocery run',n:'Pasture-raised eggs (\xd78, hard-boil tonight), any perishables for days 1\u20132. Check labels near mango / avocado.',id:'p6_0'},
+    {t:'Fresh food grocery run',n:'Pasture-raised eggs (\xd78, hard-boil tonight), any perishables for days 1\u20132',id:'p6_0'},
     {t:'Hard-boil eggs in the evening',n:'Refrigerate overnight \u2014 eat by day 2 of the trip',id:'p6_1'},
     {t:'Fill gas tank',n:null,id:'p6_2'},
     {t:'Load all non-food gear into car',n:'Tent, sleeping bags, pads, stove, kitchen kit, trekking poles, wagon, all packed bags',id:'p6_3'},
-    {t:'Load camp stove + kitchen last so it\'s accessible',n:"Lodgepole is your first cooking stop \u2014 don't bury it",id:'p6_4'},
-    {t:'Print emergency contacts and all 3 legs of directions',n:'Sequoia = zero cell service. Printed directions for that leg are non-negotiable.',id:'p6_5'},
+    {t:"Load camp stove + kitchen last (accessible)",n:"Lodgepole is your first cooking stop \u2014 don't bury it",id:'p6_4'},
+    {t:'Print emergency contacts and all 3 legs of directions',n:'Sequoia = zero cell service. Printed directions are non-negotiable for that leg.',id:'p6_5'},
     {t:'Put car snack bag in front seat',n:null,id:'p6_6'},
     {t:'Charge everything overnight',n:'iPhone, MacBook Air, iPad, Apple Watch, Anker battery pack, headlamps \xd73, satellite communicator',id:'p6_7'},
-    {t:'Run full packing list \u2014 every section',n:'jerrunge.github.io/sierra or downloaded file. Don\'t skip meds.',id:'p6_8'},
+    {t:'Run full packing list \u2014 every section',n:"jerrunge.github.io/sierra \u2014 don't skip meds or Crystal Cave tickets",id:'p6_8'},
   ]},
   {id:'p7',title:'Sun June 7 \u2014 departure',icon:'ti-car',items:[
     {t:'Pre-cool cooler 30 min before loading food',n:'Helps ice last longer on a hot June day',id:'p7_0'},
     {t:'Load cooler: ice, hard-boiled eggs, all perishables',n:null,id:'p7_1'},
-    {t:'Confirm meds bag is in cabin \u2014 not trunk',n:'Losartan and Amlodipine especially. Door pocket or accessible bag.',id:'p7_2'},
+    {t:'Confirm meds bag is in cabin \u2014 not trunk',n:'Losartan and Amlodipine especially',id:'p7_2'},
     {t:"Confirm Maddy's headphones + comfort items are in cabin",n:"She'll need them on the drive",id:'p7_3'},
     {t:'Check Yosemite Valley parking before arrival',n:'Text \u201cYosemite\u201d to 333111 for real-time lot status',id:'p7_4'},
-    {t:'Walk through home before leaving',n:'Doors locked, stove off, windows closed, plants watered if needed',id:'p7_5'},
+    {t:'Walk through home before leaving',n:'Doors locked, stove off, windows closed, plants watered',id:'p7_5'},
     {t:'5pm: wheels up',n:'Pacifica \u2192 Groveland ~2.5 hrs. Aim for hotel check-in by 7:30\u20138pm',id:'p7_6'},
   ]},
 ];
 
-/* ========= ACTIVITIES DATA ============================================= */
-const ACTS=[
-  {id:'a1',title:'Hikes \u2014 Jeremy & David',icon:'ti-mountain',open:true,items:[
-    {
-      t:'Mist Trail \u2192 Vernal + Nevada Falls loop',
-      g:['a-hard','a-top','a-june'],
-      stats:'6\u20138 mi \xb7 4\u20136 hrs \xb7 ~2,000 ft gain',
-      shuttle:'Stop 16 \u2014 Happy Isles (0.2 mi from Curry Village)',
-      n:'June is peak waterfall flow \u2014 the absolute best time for this hike. Go up Mist Trail for close-up waterfall views, come down John Muir Trail for easier knees on descent. Gets very crowded \u2014 start before 8am. Bring a waterproof layer for the Vernal Falls mist spray.',
-      cost:'Park entry only',book:null,id:'a1_0',
-    },
-    {
-      t:'Upper Yosemite Falls Trail',
-      g:['a-hard'],
-      stats:'7.6 mi RT \xb7 5\u20136 hrs \xb7 ~2,700 ft gain',
-      shuttle:'Stop 7 \u2014 Camp 4',
-      n:'Less crowded than Mist Trail. Panoramic Valley views from the top \u2014 genuinely spectacular. Full flow in June. Steep sustained switchbacks \u2014 trekking poles useful here.',
-      cost:'Park entry only',book:null,id:'a1_1',
-    },
-    {
-      t:'Four Mile Trail \u2192 Glacier Point (one-way up)',
-      g:['a-hard'],
-      stats:'4.8 mi one-way up \xb7 ~3,200 ft gain',
-      shuttle:'Trailhead: Southside Drive, ~1 mi west of Curry Village',
-      n:'Hike up, take the Glacier Point Hiker Bus back down (~$35/person, runs daily June\u2013Oct). Book the bus at travelyosemite.com before the trip. Doing it round-trip on foot is brutal \u2014 the bus option turns this into a great one-way adventure with epic views at the top.',
-      cost:'Park entry + bus ~$35/person',book:'travelyosemite.com',id:'a1_2',
-    },
-    {
-      t:'Nevada Falls via JMT (gentler option)',
-      g:['a-mod'],
-      stats:'7.6 mi RT \xb7 4\u20135 hrs \xb7 ~1,900 ft gain',
-      shuttle:'Stop 16 \u2014 Happy Isles',
-      n:'Takes the John Muir Trail up and back instead of the Mist Trail stone stairs \u2014 more gradual, less crowded, still gets you to Nevada Fall. Good choice if knees or energy are a concern.',
-      cost:'Park entry only',book:null,id:'a1_3',
-    },
+/* ===== SEQUOIA ACTIVITIES =============================================== */
+const SACTS=[
+  {id:'sa1',title:'Hikes \u2014 Jeremy & David',icon:'ti-mountain',open:true,items:[
+    {t:'Tokopah Falls',g:['a-mod','a-top','a-june'],stats:'3.6 mi RT \xb7 2\u20133 hrs \xb7 ~600 ft gain',shuttle:'Trailhead at Lodgepole Campground \u2014 walk from your site',n:'Starts right at camp \u2014 no car or shuttle needed. The 1,200-ft waterfall hits peak flow in June from snowmelt. Well-maintained trail along the Marble Fork of the Kaweah River through a granite canyon. Best payoff-to-effort ratio in the park.',cost:'Park entry only',book:null,id:'sa1_0'},
+    {t:'Alta Peak',g:['a-hard'],stats:'13.5 mi RT \xb7 7\u20139 hrs \xb7 ~4,000 ft gain',shuttle:'Wolverton Trailhead \u2014 Route 4 shuttle or drive',n:'Summit at 11,204 ft \u2014 the best panoramic views in the park, bar none. Full-day push, start by 6am. At 6,700 ft base elevation, that 4,000 ft gain is a real commitment. Bring extra layers for the summit.',cost:'Park entry only',book:null,id:'sa1_1'},
+    {t:'Moro Rock via trail (longer approach)',g:['a-mod'],stats:'3.8 mi RT \xb7 2\u20133 hrs \xb7 ~475 ft gain',shuttle:'Route 1 to Giant Forest Museum, then hike',n:'Approach from Giant Forest Museum rather than driving directly. Less crowded than driving to the small lot. At the top: 350 stairs, 360\xb0 views of the Great Western Divide. Sunset here is considered one of the best in the Sierra.',cost:'Park entry only',book:null,id:'sa1_2'},
+    {t:'Muir Grove',g:['a-mod'],stats:'4 mi RT \xb7 2\u20133 hrs \xb7 ~600 ft gain',shuttle:'Drive to Dorst Creek Campground (~20 min from Lodgepole)',n:'Isolated sequoia grove with almost no crowds \u2014 one of the most serene spots in the park. A quiet alternative to the busy Giant Forest circuit.',cost:'Park entry only',book:null,id:'sa1_3'},
   ]},
-  {id:'a2',title:'Maddy \u2014 independent options',icon:'ti-palette',open:true,items:[
-    {
-      t:'Happy Isles Art & Nature Center \u2014 adult outdoor class',
-      g:['a-top','a-book','a-mad'],
-      stats:'4 hrs \xb7 Mon\u2013Fri \xb7 Professional guest artist weekly',
-      shuttle:'Stop 16 \u2014 Happy Isles (same stop as Mist Trail)',
-      n:'Guest artist-led 4-hour outdoor workshop \u2014 watercolor, pen & ink, acrylics, printmaking, varies by week. Beginners welcome and expected. This is genuinely built for someone like her. Register by 4pm the day before at yosemite.org/art or call 209-379-2646. Book Tue June 9 from home before the trip.',
-      cost:'~$50\u2013$100',book:'yosemite.org/art',id:'a2_0',
-    },
-    {
-      t:'Happy Isles \u2014 free drop-in art activities',
-      g:['a-free','a-mad'],
-      stats:'Drop-in anytime \xb7 9am\u20134pm daily \xb7 Apr\u2013Oct',
-      shuttle:'Stop 16 \u2014 Happy Isles',
-      n:'Free self-guided art projects and nature exhibits in the same building. Good for a solo morning hour or as a warmup before the paid class. Short nearby trails through four distinct habitats: forest, river, talus, and fen.',
-      cost:'Free',book:null,id:'a2_1',
-    },
-    {
-      t:'Valley Visitor Center + Junior Ranger booklet',
-      g:['a-free','a-mad'],
-      stats:'Self-paced \xb7 Yosemite Village',
-      shuttle:'Stop 5 \u2014 Yosemite Village',
-      n:'Natural history exhibits, tactile displays, interactive Yosemite history. Pick up a Junior Ranger workbook at the front desk \u2014 complete activities to earn a wooden badge. The structured, clear expectations make this appealing for Maddy\u2019s learning style. Free.',
-      cost:'Free',book:null,id:'a2_2',
-    },
-    {
-      t:'Ansel Adams Gallery',
-      g:['a-free','a-mad'],
-      stats:'Yosemite Village \xb7 Browse free',
-      shuttle:'Stop 5 \u2014 Yosemite Village (same as Visitor Center)',
-      n:'Photography gallery with prints, books, and rotating exhibits. Free to browse. Photography walks and workshops also offered (paid, book at anseladams.com). Even just walking through is worth it \u2014 beautiful space with a direct connection to the landscape outside.',
-      cost:'Free to browse',book:null,id:'a2_3',
-    },
-    {
-      t:'Valley floor / Merced River hang',
-      g:['a-easy','a-free','a-mad'],
-      stats:'No distance commitment \xb7 Flat',
-      shuttle:'Walk from Curry Village',
-      n:'Meadow and river access right from the tent. No schedule, no crowds, no pressure. Bring watercolors. A perfect anchor activity for a slow morning or transition time.',
-      cost:'Free',book:null,id:'a2_4',
-    },
-    {
-      t:'Free Valley Shuttle \u2014 full loop ride',
-      g:['a-easy','a-free','a-mad'],
-      stats:'~1 hr full loop \xb7 Runs all day 7am\u201310pm',
-      shuttle:'Start at stop 14 (Curry Village)',
-      n:'Get on, ride the entire Valley loop, get off anywhere interesting. Free, accessible, zero commitment. Great for scoping the Valley on the first day or filling a lower-energy morning without pressure.',
-      cost:'Free',book:null,id:'a2_5',
-    },
-    {
-      t:'LeConte Memorial Lodge \u2014 evening talks',
-      g:['a-free','a-mad'],
-      stats:'Evenings Fri\u2013Sun \xb7 Adults \xb7 ~1 hr',
-      shuttle:'0.6 mi walk from Curry Village on Southside Drive',
-      n:'Sierra Club\u2019s 1904 heritage building. Free adult programs on ecology, wilderness history, and Yosemite\u2019s cultural past. Quiet, structured, indoors. Check nps.gov/yose or the park newspaper for that week\u2019s topic.',
-      cost:'Free',book:null,id:'a2_6',
-    },
+  {id:'sa2',title:'Maddy \u2014 independent options',icon:'ti-palette',open:true,items:[
+    {t:'Tokopah Falls (at her pace)',g:['a-mod','a-mad'],stats:'Go as far as feels right \xb7 Walk from camp',shuttle:'Trailhead steps from Lodgepole sites',n:"Starts right at camp \u2014 no logistics, no shuttle, no fixed distance. She can walk out along the river, sit on the granite, turn back whenever. The canyon is spectacular even halfway in.",cost:'Free',book:null,id:'sa2_0'},
+    {t:'Giant Forest Museum',g:['a-easy','a-free','a-mad'],stats:'Self-paced \xb7 ~1 hr \xb7 Wheelchair accessible',shuttle:'Route 1 from Lodgepole (free)',n:'Free, genuinely excellent museum on giant sequoia ecology, history, and scale. Tactile exhibits. Good for a solo morning or a rainy hour. The scale models make the size comprehensible in a way the trees themselves can\'t.',cost:'Free',book:null,id:'sa2_1'},
+    {t:'Big Trees Trail',g:['a-easy','a-free','a-mad'],stats:'1.2 mi paved loop \xb7 ~45 min \xb7 Flat',shuttle:'Route 1 to Giant Forest Museum (adjacent)',n:'Paved, flat loop through Round Meadow with interpretive signs. Clear path, clear endpoints, no navigation decisions. One of the most accessible and peaceful walks in the park.',cost:'Park entry only',book:null,id:'sa2_2'},
+    {t:'General Sherman Tree',g:['a-easy','a-mad'],stats:'0.5\u20131 mi RT \xb7 Slight descent',shuttle:'Route 4 from Lodgepole (Sherman Trailhead stop)',n:"World\u2019s largest living organism by volume. Photos don\u2019t capture the scale \u2014 it\u2019s genuinely awe-inducing in person. Accessible paved trail from the upper lot.",cost:'Park entry only',book:null,id:'sa2_3'},
+    {t:'Lodgepole Visitor Center',g:['a-free','a-mad'],stats:'Walk from campsite \xb7 1/4 mile',shuttle:'Walking distance from camp',n:'Nature exhibits, maps, Junior Ranger booklets. Good anchor for a low-key morning. Same stop as the market, showers, and laundry.',cost:'Free',book:null,id:'sa2_4'},
+    {t:'Moro Rock (take shuttle)',g:['a-easy','a-mad'],stats:'0.5 mi \xb7 350 stairs \xb7 ~1 hr total',shuttle:'Route 1 then Route 2 (free) or drive on Mon/Tue',n:'Great structured solo adventure \u2014 shuttle or drive there, one clear destination, 360\xb0 views at the top. The stairs are steep but well-railed the whole way.',cost:'Park entry only',book:null,id:'sa2_5'},
+    {t:'Stargazing at camp',g:['a-easy','a-free','a-mad'],stats:'After dark \xb7 At campsite',shuttle:null,n:'Lodgepole at 6,700 ft is dark sky territory. Milky Way visible on a clear June night. Bring a blanket, find a clearing near the river. Possibly the most transportive free experience of the whole trip.',cost:'Free',book:null,id:'sa2_6'},
   ]},
-  {id:'a3',title:'Together / easier options',icon:'ti-users',open:false,items:[
-    {
-      t:'Lower Yosemite Falls Trail',
-      g:['a-easy','a-top'],
-      stats:'1.2 mi loop \xb7 Under 1 hr \xb7 Mostly flat',
-      shuttle:'Stop 6 \u2014 Lower Yosemite Fall',
-      n:'Full roaring flow in June. Easy enough for everyone, spectacular enough to matter. Good arrival-day hike or morning warm-up. Potable water and restrooms at the trailhead.',
-      cost:'Park entry only',book:null,id:'a3_0',
-    },
-    {
-      t:'Mirror Lake / Tenaya Canyon loop',
-      g:['a-easy','a-top'],
-      stats:'5 mi loop \xb7 2\u20133 hrs \xb7 Mostly flat + shaded',
-      shuttle:'Stop 17 \u2014 Mirror Lake',
-      n:'Gorgeous Half Dome reflection in the lake \u2014 best in early summer when water is still high. Significantly less crowded than other Valley hikes. Go early. Genuinely underrated.',
-      cost:'Park entry only',book:null,id:'a3_1',
-    },
-    {
-      t:"Cook's Meadow walk",
-      g:['a-easy','a-free'],
-      stats:'~2 mi \xb7 Flat \xb7 Any time of day',
-      shuttle:'Stop 9 \u2014 Valley Visitor Center area',
-      n:'Iconic open meadow views of Yosemite Falls and Half Dome. Completely flat, partially paved. Perfect for sunrise, golden hour, or a low-key stroll on arrival or departure day.',
-      cost:'Park entry only',book:null,id:'a3_2',
-    },
-    {
-      t:'Valley Floor Tour \u2014 ranger-led open-air tram',
-      g:['a-easy'],
-      stats:'~2 hrs \xb7 Up to 7 daily departures in summer',
-      shuttle:'Departs from Curry Village area and other Valley stops',
-      n:'Led by park rangers and Yosemite Hospitality naturalists. Covers El Capitan, Yosemite Falls, Half Dome, Tunnel View, Bridalveil Fall. Good shared option with Maddy on a lower-energy day. Book at travelyosemite.com.',
-      cost:'~$30/adult',book:'travelyosemite.com',id:'a3_3',
-    },
-    {
-      t:'Curry Village pool',
-      g:['a-easy'],
-      stats:'Seasonal \xb7 Typically open June\u2013Sept',
-      shuttle:'No shuttle \u2014 at Curry Village',
-      n:'Outdoor pool. Fee (~$10/adult). Confirm it\u2019s open at check-in. Good post-hike recovery option.',
-      cost:'~$10/adult',book:null,id:'a3_4',
-    },
+  {id:'sa3',title:'Together / all three',icon:'ti-users',open:false,items:[
+    {t:'Moro Rock',g:['a-easy','a-top'],stats:'0.5 mi \xb7 350 stairs \xb7 ~1 hr',shuttle:'Drive on Mon/Tue (weekday = road open to private vehicles)',n:'Best view in the park. 360\xb0 panorama of the Great Western Divide. On your weekdays you can drive directly to the small lot. Sunset here is consistently cited as one of the best in the Sierra.',cost:'Park entry only',book:null,id:'sa3_0'},
+    {t:'Crystal Cave tour',g:['a-top','a-book'],stats:'50-min guided tour \xb7 Half-day with drive',shuttle:'Drive (9 mi from Lodgepole, 45-min winding road)',n:'Marble cavern with crystal draperies and stalagmites \u2014 50\xb0F year-round. Bring jackets for all three. 2025 season sold out. Buy tickets NOW at sequoiaparksconservancy.org \u2014 no tickets sold at the cave. Tours 9am\u20133pm daily. Allow extra drive time: construction on Cave Road this summer.',cost:'Paid \u2014 sequoiaparksconservancy.org',book:'sequoiaparksconservancy.org/crystal-cave',id:'sa3_1'},
+    {t:'General Sherman + Congress Trail loop',g:['a-easy','a-top'],stats:'3.3 mi loop \xb7 ~2 hrs \xb7 Mostly flat',shuttle:'Route 4 from Lodgepole (free)',n:"Start at General Sherman (world\u2019s largest tree), continue on the Congress Trail loop through the heart of Giant Forest. Crowds thin dramatically once you leave Sherman. Cathedral-like old-growth forest.",cost:'Park entry only',book:null,id:'sa3_2'},
+    {t:'Tunnel Log + Auto Log',g:['a-easy'],stats:'Drive-through / walk-up \xb7 Near Crescent Meadow',shuttle:'Route 2 or drive',n:'Fallen sequoia with a hole carved through it \u2014 drive the car through. Auto Log is a felled tree you can park on top of. Absurd in the best way. Quick stops but worth it.',cost:'Park entry only',book:null,id:'sa3_3'},
+    {t:'Campfire at the site',g:['a-easy','a-free'],stats:'Each evening at Lodgepole',shuttle:null,n:'Fire ring and grate at every site. Buy firewood at Lodgepole Village market (1/4 mile from camp) \u2014 do not bring from home (CA firewood transport regs). Best way to end every night.',cost:'Firewood ~$10 at market',book:null,id:'sa3_4'},
   ]},
-  {id:'a4',title:'Evening programs',icon:'ti-moon',open:false,items:[
-    {
-      t:'Ranger Evening Program',
-      g:['a-free','a-mad'],
-      stats:'7pm\u20138pm \xb7 Yosemite Valley Lodge (Cliff Room)',
-      shuttle:'Stop 8 \u2014 Yosemite Valley Lodge',
-      n:'Topics change nightly: bears, geology, cultural history, wildlife, Native American traditions. Check the Yosemite Guide newspaper (free at entrance or Visitor Center) for that week\u2019s schedule. Free, accessible, usually under an hour. Good for Maddy \u2014 clear structure, single topic, no movement required.',
-      cost:'Free',book:null,id:'a4_0',
-    },
-    {
-      t:'Yosemite After Dark',
-      g:['a-book'],
-      stats:'~2 hrs \xb7 Evening \xb7 ~$20/person',
-      shuttle:'Check booking site for meeting point',
-      n:'Naturalist-led program covering nocturnal animals and some astronomy. Engaging and interactive. Book at travelyosemite.com.',
-      cost:'~$20/person',book:'travelyosemite.com',id:'a4_1',
-    },
-    {
-      t:'LeConte Memorial Lodge evening talk',
-      g:['a-free','a-mad'],
-      stats:'Fri\u2013Sun evenings \xb7 ~1 hr \xb7 Adults',
-      shuttle:'0.6 mi walk from Curry Village',
-      n:'Sierra Club programs on ecology, wilderness history, and conservation. Relaxed and intellectual. Free. Check nps.gov/yose for that week\u2019s topic.',
-      cost:'Free',book:null,id:'a4_2',
-    },
+  {id:'sa4',title:'Kings Canyon day trip',icon:'ti-road',open:false,items:[
+    {t:'Kings Canyon Scenic Byway \u2014 full drive',g:['a-top'],stats:'38 mi one way \xb7 Plan a full day',shuttle:'Drive only (no shuttles in Kings Canyon)',n:'Confirmed open in June (typically opens late April). Drops 3,700 ft from Grant Grove into the deep canyon alongside the Kings River. Widely described as the most dramatic scenic drive in the national park system.',cost:'Park entry only (covered by pass)',book:null,id:'sa4_0'},
+    {t:'Mist Falls',g:['a-mod','a-june'],stats:'8 mi RT \xb7 4\u20135 hrs \xb7 ~800 ft gain',shuttle:'Drive to Roads End, Cedar Grove',n:"One of the largest waterfalls in Kings Canyon \u2014 peak flow in June. Trail follows the South Fork of the Kings River through dramatic canyon. Combine with Zumwalt Meadow + Roaring River Falls stops on the drive in.",cost:'Park entry only',book:null,id:'sa4_1'},
+    {t:'Zumwalt Meadow + Roaring River Falls',g:['a-easy','a-top'],stats:'4.2 mi RT combined \xb7 ~2 hrs \xb7 Easy',shuttle:'Drive to Cedar Grove (Roads End area)',n:'Zumwalt Meadow: suspension bridge over the Kings River, granite canyon walls rising straight up, bears and deer common. Roaring River Falls: 0.3-mi paved walk to a powerful gorge cascade. Combine both in one stop. June = peak waterfall flow.',cost:'Park entry only',book:null,id:'sa4_2'},
+    {t:'Grizzly Falls',g:['a-easy'],stats:'0.1 mi walk \xb7 10 min',shuttle:'Stop along Kings Canyon Scenic Byway',n:'80-ft waterfall visible from a tiny pull-off. Perfect stretch and photo stop on the byway drive.',cost:'Park entry only',book:null,id:'sa4_3'},
+    {t:'General Grant Tree \u2014 Grant Grove',g:['a-easy'],stats:'0.3 mi RT \xb7 Near Big Stump Entrance',shuttle:'Drive (near Kings Canyon entrance)',n:"Third-largest tree in the world, the National Christmas Tree. Good entry or exit stop on the Kings Canyon drive \u2014 even if you don't do the full Cedar Grove run.",cost:'Park entry only',book:null,id:'sa4_4'},
   ]},
-  {id:'a5',title:'Logistics + booking notes',icon:'ti-info-circle',open:false,items:[
-    {
-      t:'Valley Shuttle: free, continuous, use constantly',
-      g:['a-free'],
-      stats:'Stops 1\u201319 \xb7 7am\u201310pm in summer',
-      shuttle:'Stop 14 = Curry Village. Stop 16 = Happy Isles. Stop 6 = Lower Falls. Stop 5 = Village.',
-      n:'Park the car once at Curry Village on arrival and don\u2019t move it. Use the shuttle for everything. Recent reviews say parking is stressful at busy times \u2014 once parked, stay parked.',
-      cost:'Free',book:null,id:'a5_0',
-    },
-    {
-      t:'Happy Isles art class \u2014 book before you leave home',
-      g:['a-book'],
-      stats:'Register by 4pm the day before \xb7 yosemite.org/art',
-      shuttle:null,
-      n:'Each week a different guest artist and medium. Check the June 9 class at yosemite.org/art and register from home before June 8. Call 209-379-2646 if the website is unclear. This one fills up.',
-      cost:'~$50\u2013$100',book:'yosemite.org/art',id:'a5_1',
-    },
-    {
-      t:'Glacier Point Hiker Bus \u2014 if doing Four Mile Trail',
-      g:['a-book'],
-      stats:'~$35/person each way \xb7 Daily Jun\u2013Oct',
-      shuttle:'Departs from Curry Village area',
-      n:'Book at travelyosemite.com before the trip. Runs multiple times daily in June. Worth booking on Saturday June 6 if Four Mile Trail is on the agenda.',
-      cost:'~$35/person each way',book:'travelyosemite.com',id:'a5_2',
-    },
-    {
-      t:'Yosemite Guide newspaper \u2014 get it on arrival',
-      g:['a-free'],
-      stats:'Free at entrance station or Visitor Center',
-      shuttle:null,
-      n:"The paper has the full weekly schedule for all ranger programs, evening talks, and special events. More complete than the website for time-sensitive programming. Grab one at the entrance gate or Visitor Center stop 5.",
-      cost:'Free',book:null,id:'a5_3',
-    },
-    {
-      t:'No cooking at Curry Village \u2014 use the restaurants',
-      g:[],
-      stats:'Pizza Deck \xb7 Seven Tents Pavilion \xb7 Bar 1899 \xb7 Taqueria \xb7 Coffee Corner',
-      shuttle:null,
-      n:'No cooking inside the tent or anywhere in Curry Village. Camp stove stays in the car until Lodgepole. Restaurants are clustered near the registration area \u2014 walkable from any tent. Arrival night: just use the Taqueria or Pizza Deck.',
-      cost:null,book:null,id:'a5_4',
-    },
+  {id:'sa5',title:'Logistics + booking notes',icon:'ti-info-circle',open:false,items:[
+    {t:'Crystal Cave: book NOW \u2014 no tickets at the cave',g:['a-book'],stats:'sequoiaparksconservancy.org/crystal-cave \xb7 Tours 9am\u20133pm daily',shuttle:'9 mi from Lodgepole \xb7 45-min winding road \xb7 Vehicles over 22 ft not permitted',n:'2025 season sold out. Buy before you leave home. Cave is 50\xb0F year-round \u2014 bring jackets for all three. Construction on Cave Road this summer: allow extra travel time. ALS and ASL tours available.',cost:'Paid',book:'sequoiaparksconservancy.org/crystal-cave',id:'sa5_0'},
+    {t:'Free shuttle: 4 routes, runs May 22 \u2013 Sep 7',g:['a-free'],stats:'Routes: Green, Gray, Purple, Orange',shuttle:'Route 1 (Green): Lodgepole \u2194 Giant Forest \u2194 Sherman. Route 2 (Gray): Giant Forest \u2192 Moro Rock \u2192 Crescent Meadow. Route 3 (Purple): Lodgepole \u2194 Wuksachi. Route 4 (Orange): Sherman + Wolverton.',n:'Mon/Tue when you are there = weekdays = Moro Rock road open to private vehicles (you can drive). Weekends and holidays: shuttle is the only option for Moro Rock / Crescent Meadow.',cost:'Free',book:null,id:'sa5_1'},
+    {t:'Firewood: buy at Lodgepole Village market, not from home',g:[],stats:'~$10/bundle \xb7 Market is 1/4 mile from camp',shuttle:null,n:'California state regulations restrict transporting firewood more than 50 miles from its source to prevent invasive pest spread. Buy at the Lodgepole market on arrival.',cost:'~$10/bundle',book:null,id:'sa5_2'},
+    {t:'Lodgepole Village: market, showers, visitor center',g:['a-free'],stats:'1/4 mile walk from campground',shuttle:'Walking distance',n:'Market carries groceries, firewood, camp supplies, and ice. Coin-op showers and laundry available (bring quarters). Visitor Center has ranger program schedule, maps, Junior Ranger materials.',cost:'Showers: coin-op',book:null,id:'sa5_3'},
+    {t:'Zero cell service \u2014 download everything before arriving',g:['a-book'],stats:'No signal anywhere in the Lodgepole / Giant Forest area',shuttle:null,n:'AllTrails offline maps, park maps, all confirmation emails, Crystal Cave booking confirmation, and Kings Canyon Byway route all need to be downloaded and saved offline before you leave Yosemite. Non-negotiable.',cost:null,book:null,id:'sa5_4'},
+    {t:'Altitude note: Lodgepole is at 6,700 ft',g:[],stats:'Expect slower pace day 1',shuttle:null,n:'Coming from sea level, most people feel winded for the first day or two. Normal and temporary. Drink extra water, take it slower on the first hike, and have altitude headache meds in the kit.',cost:null,book:null,id:'sa5_5'},
   ]},
 ];
 
-/* ========= TAG MAPS ==================================================== */
+/* ===== YOSEMITE ACTIVITIES ============================================== */
+const YACTS=[
+  {id:'ya1',title:'Hikes \u2014 Jeremy & David',icon:'ti-mountain',open:true,items:[
+    {t:'Mist Trail \u2192 Vernal + Nevada Falls loop',g:['a-hard','a-top','a-june'],stats:'6\u20138 mi \xb7 4\u20136 hrs \xb7 ~2,000 ft gain',shuttle:'Stop 16 \u2014 Happy Isles (0.2 mi from Curry Village)',n:'June = peak waterfall flow \u2014 the absolute best time for this hike. Up Mist Trail for close-up waterfall views, down JMT for easier knees. Very crowded \u2014 start before 8am. Waterproof layer for Vernal Falls mist spray.',cost:'Park entry only',book:null,id:'ya1_0'},
+    {t:'Upper Yosemite Falls Trail',g:['a-hard'],stats:'7.6 mi RT \xb7 5\u20136 hrs \xb7 ~2,700 ft gain',shuttle:'Stop 7 \u2014 Camp 4',n:'Less crowded than Mist Trail. Panoramic Valley views from the top. Full flow in June. Steep sustained switchbacks \u2014 trekking poles useful.',cost:'Park entry only',book:null,id:'ya1_1'},
+    {t:'Four Mile Trail \u2192 Glacier Point (one-way up)',g:['a-hard'],stats:'4.8 mi one-way up \xb7 ~3,200 ft gain',shuttle:'Trailhead: Southside Drive, ~1 mi west of Curry Village',n:'Hike up, take the Glacier Point Hiker Bus back down (~$35/person, daily June\u2013Oct). Book at travelyosemite.com before the trip. Round-trip on foot is brutal \u2014 the bus turns this into a great one-way with epic views.',cost:'Park entry + bus ~$35/person',book:'travelyosemite.com',id:'ya1_2'},
+    {t:'Nevada Falls via JMT (gentler option)',g:['a-mod'],stats:'7.6 mi RT \xb7 4\u20135 hrs \xb7 ~1,900 ft gain',shuttle:'Stop 16 \u2014 Happy Isles',n:'John Muir Trail up and back instead of Mist Trail stone stairs \u2014 more gradual, less crowded. Good if knees or energy are a factor.',cost:'Park entry only',book:null,id:'ya1_3'},
+  ]},
+  {id:'ya2',title:'Maddy \u2014 independent options',icon:'ti-palette',open:true,items:[
+    {t:'Happy Isles adult outdoor art class',g:['a-top','a-book','a-mad'],stats:'4 hrs \xb7 Mon\u2013Fri \xb7 Guest artist weekly',shuttle:'Stop 16 \u2014 Happy Isles (same stop as Mist Trail)',n:'Guest artist-led 4-hr outdoor workshop \u2014 watercolor, pen & ink, acrylics, printmaking, rotates weekly. Beginners expected and welcomed. Register by 4pm the day before at yosemite.org/art or call 209-379-2646. Book Tue June 9 from home.',cost:'~$50\u2013$100',book:'yosemite.org/art',id:'ya2_0'},
+    {t:'Happy Isles \u2014 free drop-in art activities',g:['a-free','a-mad'],stats:'Drop-in anytime \xb7 9am\u20134pm daily',shuttle:'Stop 16 \u2014 Happy Isles',n:'Free self-guided art projects and nature exhibits. Good for a solo morning or warmup. Short nearby trails through four habitats: forest, river, talus, fen.',cost:'Free',book:null,id:'ya2_1'},
+    {t:'Valley Visitor Center + Junior Ranger booklet',g:['a-free','a-mad'],stats:'Self-paced \xb7 Yosemite Village',shuttle:'Stop 5 \u2014 Yosemite Village',n:'Natural history exhibits, interactive displays. Junior Ranger workbook from the front desk \u2014 complete activities to earn a wooden badge. Structured, clear expectations.',cost:'Free',book:null,id:'ya2_2'},
+    {t:'Ansel Adams Gallery',g:['a-free','a-mad'],stats:'Yosemite Village \xb7 Browse free',shuttle:'Stop 5 \u2014 Yosemite Village',n:'Photography gallery with prints and rotating exhibits. Free to browse. Photography walks and workshops also available (paid, book at anseladams.com).',cost:'Free to browse',book:null,id:'ya2_3'},
+    {t:'Valley floor / Merced River hang',g:['a-easy','a-free','a-mad'],stats:'No commitment \xb7 Flat \xb7 Walk from tent',shuttle:'Walk from Curry Village',n:'Meadow and river access right from the tent. No schedule, no crowds, no pressure. Bring watercolors.',cost:'Free',book:null,id:'ya2_4'},
+    {t:'Free Valley Shuttle \u2014 full loop ride',g:['a-easy','a-free','a-mad'],stats:'~1 hr full loop \xb7 7am\u201310pm',shuttle:'Start at stop 14 (Curry Village)',n:'Ride the entire Valley loop, get off at anything interesting. Free, accessible, zero commitment. Great solo Valley orientation.',cost:'Free',book:null,id:'ya2_5'},
+    {t:'LeConte Memorial Lodge \u2014 evening talks',g:['a-free','a-mad'],stats:'Fri\u2013Sun evenings \xb7 ~1 hr \xb7 Adults',shuttle:'0.6 mi walk from Curry Village',n:'Sierra Club\u2019s 1904 heritage building. Free adult programs on ecology, wilderness history, Yosemite culture. Check nps.gov/yose for that week\u2019s topic.',cost:'Free',book:null,id:'ya2_6'},
+  ]},
+  {id:'ya3',title:'Together / easier options',icon:'ti-users',open:false,items:[
+    {t:'Lower Yosemite Falls Trail',g:['a-easy','a-top'],stats:'1.2 mi loop \xb7 Under 1 hr \xb7 Mostly flat',shuttle:'Stop 6 \u2014 Lower Yosemite Fall',n:'Full roaring flow in June. Easy enough for everyone, spectacular enough to matter. Good arrival-day hike.',cost:'Park entry only',book:null,id:'ya3_0'},
+    {t:'Mirror Lake / Tenaya Canyon loop',g:['a-easy','a-top'],stats:'5 mi loop \xb7 2\u20133 hrs \xb7 Flat + shaded',shuttle:'Stop 17 \u2014 Mirror Lake',n:'Half Dome reflection in early summer. Less crowded than most Valley hikes. Go early.',cost:'Park entry only',book:null,id:'ya3_1'},
+    {t:"Cook's Meadow walk",g:['a-easy','a-free'],stats:'~2 mi \xb7 Flat \xb7 Any time',shuttle:'Stop 9 \u2014 Visitor Center area',n:'Iconic views of Yosemite Falls and Half Dome from the meadow. Completely flat. Perfect for arrival or departure day.',cost:'Park entry only',book:null,id:'ya3_2'},
+    {t:'Valley Floor Tour \u2014 ranger-led open-air tram',g:['a-easy'],stats:'~2 hrs \xb7 Up to 7 daily departures',shuttle:'Departs from Curry Village area and other Valley stops',n:'Led by park rangers. Covers El Capitan, Yosemite Falls, Half Dome, Tunnel View, Bridalveil Fall. Good shared option with Maddy on a low-energy day.',cost:'~$30/adult',book:'travelyosemite.com',id:'ya3_3'},
+    {t:'Curry Village pool',g:['a-easy'],stats:'Seasonal \xb7 Typically open June\u2013Sept',shuttle:'No shuttle \u2014 at Curry Village',n:'Outdoor pool, fee (~$10/adult). Confirm open at check-in.',cost:'~$10/adult',book:null,id:'ya3_4'},
+  ]},
+  {id:'ya4',title:'Evening programs',icon:'ti-moon',open:false,items:[
+    {t:'Ranger Evening Program',g:['a-free','a-mad'],stats:'7pm\u20138pm \xb7 Yosemite Valley Lodge (Cliff Room)',shuttle:'Stop 8 \u2014 Yosemite Valley Lodge',n:'Topics change nightly: bears, geology, cultural history, wildlife. Check the Yosemite Guide newspaper (free at entrance / Visitor Center) for schedule. Good for Maddy \u2014 clear structure, single topic, indoors.',cost:'Free',book:null,id:'ya4_0'},
+    {t:'Yosemite After Dark',g:['a-book'],stats:'~2 hrs \xb7 Evening \xb7 ~$20/person',shuttle:'Check booking for meeting point',n:'Naturalist-led program: nocturnal animals + astronomy. Book at travelyosemite.com.',cost:'~$20/person',book:'travelyosemite.com',id:'ya4_1'},
+    {t:'LeConte Memorial Lodge evening talk',g:['a-free','a-mad'],stats:'Fri\u2013Sun evenings \xb7 ~1 hr',shuttle:'0.6 mi walk from Curry Village',n:'Sierra Club programs on ecology, history, conservation. Free. Check nps.gov/yose.',cost:'Free',book:null,id:'ya4_2'},
+  ]},
+  {id:'ya5',title:'Logistics + booking notes',icon:'ti-info-circle',open:false,items:[
+    {t:'Valley Shuttle: free, use constantly',g:['a-free'],stats:'Stops 1\u201319 \xb7 7am\u201310pm',shuttle:'Stop 14 = Curry Village. Stop 16 = Happy Isles. Stop 6 = Lower Falls. Stop 5 = Village.',n:'Park once on arrival, don\u2019t move the car. Recent reviews flag Valley parking as stressful at busy times.',cost:'Free',book:null,id:'ya5_0'},
+    {t:'Happy Isles art class \u2014 book from home',g:['a-book'],stats:'Register by 4pm day before \xb7 yosemite.org/art',shuttle:null,n:'Register for Tue June 9 class on Mon June 8 by 4pm (or earlier from home). Call 209-379-2646 if website is unclear. Fills up.',cost:'~$50\u2013$100',book:'yosemite.org/art',id:'ya5_1'},
+    {t:'Glacier Point Hiker Bus (if doing Four Mile Trail)',g:['a-book'],stats:'~$35/person each way \xb7 Daily Jun\u2013Oct',shuttle:'Departs from Curry Village area',n:'Book at travelyosemite.com before the trip.',cost:'~$35/person',book:'travelyosemite.com',id:'ya5_2'},
+    {t:'Yosemite Guide newspaper \u2014 grab on arrival',g:['a-free'],stats:'Free at entrance or Visitor Center',shuttle:null,n:'Complete weekly schedule of ranger programs, evening talks, and special events. More complete than the website.',cost:'Free',book:null,id:'ya5_3'},
+    {t:'No cooking at Curry Village',g:[],stats:'Pizza Deck \xb7 Pavilion \xb7 Bar 1899 \xb7 Taqueria \xb7 Coffee Corner',shuttle:null,n:'No cooking inside the tent or anywhere in Curry Village. Camp stove stays in the car until Lodgepole.',cost:null,book:null,id:'ya5_4'},
+  ]},
+];
+
+/* ===== TAG MAPS ========================================================= */
 const TM={crit:{c:'t-crit',l:'\u25cf Critical'},seq:{c:'t-seq',l:'Sequoia only'},cur:{c:'t-cur',l:'Curry Village'},jer:{c:'t-jer',l:'Jeremy'},dav:{c:'t-dav',l:'David'},mad:{c:'t-mad',l:'Maddy'}};
 const ATM={'a-hard':{c:'at-hard',l:'Hard'},'a-mod':{c:'at-mod',l:'Moderate'},'a-easy':{c:'at-easy',l:'Easy'},'a-free':{c:'at-free',l:'Free'},'a-book':{c:'at-book',l:'Book ahead'},'a-top':{c:'at-top',l:'\u2605 Top pick'},'a-mad':{c:'at-mad',l:'Great for Maddy'},'a-june':{c:'at-june',l:'Best in June'}};
 
-/* ========= STATE ======================================================= */
-const PACK_STORE='sierra-packing-jun2026';
-const PREP_STORE='sierra-prep-jun2026';
+/* ===== STATE ============================================================ */
+const PACK_STORE='sierra-packing-jun2026',PREP_STORE='sierra-prep-jun2026';
 let sections,openSet=new Set(),checkedSet=new Set(),editMode=false;
 let prepOpenSet=new Set(),prepCheckedSet=new Set();
-let actsOpenSet=new Set(['a1','a2']);
+let seqOpenSet=new Set(['sa1','sa2']),yosOpenSet=new Set(['ya1','ya2']);
 
 function deepCopy(o){return JSON.parse(JSON.stringify(o));}
 function mktag(k,map){const m=(map||TM)[k];return m?`<span class="tag ${m.c}">${m.l}</span>`:'';}
 
-/* ========= TAB SWITCH ================================================== */
+/* ===== TAB ============================================================== */
 function switchTab(tab){
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));
-  document.getElementById('panel-packing').style.display=tab==='packing'?'':'none';
-  document.getElementById('panel-prep').style.display=tab==='prep'?'':'none';
-  document.getElementById('panel-acts').style.display=tab==='acts'?'':'none';
+  ['pack','prep','seq','yos'].forEach(t=>{document.getElementById(`panel-${t}`).style.display=t===tab?'':'none';});
 }
 
-/* ========= INIT ======================================================== */
+/* ===== INIT ============================================================= */
 function init(){
   try{const s=JSON.parse(localStorage.getItem(PACK_STORE));if(s&&Array.isArray(s.sections)){sections=s.sections;checkedSet=new Set(s.checked||[]);openSet=new Set(s.open||[]);}else throw 0;}
   catch(e){sections=deepCopy(DEFS);}
   try{const p=JSON.parse(localStorage.getItem(PREP_STORE));if(p){prepCheckedSet=new Set(p.checked||[]);prepOpenSet=new Set(p.open||[]);}}catch(e){}
   if(!prepOpenSet.size){
-    const now=new Date();
-    const phases=[{id:'p0',until:new Date('2026-05-30')},{id:'p1',until:new Date('2026-05-31')},{id:'p2',until:new Date('2026-06-01')},{id:'p3',until:new Date('2026-06-03')},{id:'p4',until:new Date('2026-06-05')},{id:'p5',until:new Date('2026-06-06')},{id:'p6',until:new Date('2026-06-07')},{id:'p7',until:new Date('2026-06-08')}];
-    const active=phases.find(p=>now<p.until);
-    if(active)prepOpenSet.add(active.id);
+    const now=new Date(),phases=[{id:'p0',until:new Date('2026-05-30')},{id:'p1',until:new Date('2026-05-31')},{id:'p2',until:new Date('2026-06-01')},{id:'p3',until:new Date('2026-06-03')},{id:'p4',until:new Date('2026-06-05')},{id:'p5',until:new Date('2026-06-06')},{id:'p6',until:new Date('2026-06-07')},{id:'p7',until:new Date('2026-06-08')}];
+    const active=phases.find(p=>now<p.until);if(active)prepOpenSet.add(active.id);
   }
-  render();renderPrep();renderActs();
+  render();renderPrep();renderActs(SACTS,'seq-sc',seqOpenSet);renderActs(YACTS,'yos-sc',yosOpenSet);
 }
 
-/* ========= PACKING ===================================================== */
+/* ===== PACKING ========================================================== */
 function render(){
   const sy=window.scrollY,sc=document.getElementById('sc');sc.innerHTML='';
   sections.forEach(sec=>{
@@ -695,12 +559,7 @@ function render(){
     const body=document.createElement('div');body.style.display=isOpen?'block':'none';
     sec.items.forEach(item=>body.appendChild(mkRow(item,sec.id)));
     if(editMode)body.appendChild(mkAddArea(sec.id));
-    hdr.addEventListener('click',()=>{
-      const o=body.style.display!=='none';body.style.display=o?'none':'block';
-      if(o)openSet.delete(sec.id);else openSet.add(sec.id);
-      document.getElementById(`${sec.id}-v`).style.transform=o?'':'rotate(180deg)';
-      hdr.setAttribute('aria-expanded',String(!o));save();
-    });
+    hdr.addEventListener('click',()=>{const o=body.style.display!=='none';body.style.display=o?'none':'block';if(o)openSet.delete(sec.id);else openSet.add(sec.id);document.getElementById(`${sec.id}-v`).style.transform=o?'':'rotate(180deg)';hdr.setAttribute('aria-expanded',String(!o));save();});
     wrap.appendChild(hdr);wrap.appendChild(body);sc.appendChild(wrap);
   });
   upd();window.scrollTo(0,sy);
@@ -756,7 +615,7 @@ function save(){try{localStorage.setItem(PACK_STORE,JSON.stringify({sections,che
 function resetChecked(){if(!confirm('Clear all checkmarks? Custom items will be kept.'))return;checkedSet.clear();save();render();}
 function restoreDefaults(){if(!confirm('Restore original list? All custom edits and checkmarks will be lost.'))return;sections=deepCopy(DEFS);checkedSet.clear();openSet.clear();try{localStorage.removeItem(PACK_STORE);}catch(e){}render();}
 
-/* ========= PREP ======================================================== */
+/* ===== PREP ============================================================= */
 function renderPrep(){
   const sy=window.scrollY,sc=document.getElementById('prep-sc');sc.innerHTML='';
   PREP.forEach(sec=>{
@@ -766,27 +625,17 @@ function renderPrep(){
     hdr.innerHTML=`<i class="ti ${sec.icon}" style="font-size:16px;color:var(--tx1)" aria-hidden="true"></i><span style="font-size:14px;font-weight:500;flex:1;color:var(--tx0)">${sec.title}</span><span id="${sec.id}-pc" style="font-size:12px;color:var(--tx1);margin-right:4px">${chk} / ${tot}</span><div style="width:52px;height:4px;background:var(--bdr);border-radius:9999px;overflow:hidden;margin-right:8px"><div id="${sec.id}-pb" style="height:100%;background:var(--accent);border-radius:9999px;width:${pct}%"></div></div><i class="ti ti-chevron-down" id="${sec.id}-pv" style="font-size:14px;color:var(--tx2);transform:${isOpen?'rotate(180deg)':''}" aria-hidden="true"></i>`;
     const body=document.createElement('div');body.style.display=isOpen?'block':'none';
     sec.items.forEach(item=>body.appendChild(mkPrepRow(item,wrap)));
-    hdr.addEventListener('click',()=>{
-      const o=body.style.display!=='none';body.style.display=o?'none':'block';
-      if(o)prepOpenSet.delete(sec.id);else prepOpenSet.add(sec.id);
-      document.getElementById(`${sec.id}-pv`).style.transform=o?'':'rotate(180deg)';
-      hdr.setAttribute('aria-expanded',String(!o));savePrep();
-    });
+    hdr.addEventListener('click',()=>{const o=body.style.display!=='none';body.style.display=o?'none':'block';if(o)prepOpenSet.delete(sec.id);else prepOpenSet.add(sec.id);document.getElementById(`${sec.id}-pv`).style.transform=o?'':'rotate(180deg)';hdr.setAttribute('aria-expanded',String(!o));savePrep();});
     wrap.appendChild(hdr);wrap.appendChild(body);sc.appendChild(wrap);
   });
-  updPrep();window.scrollTo(0,sy);
+  updPrep();window.scrollTo(0,window.scrollY);
 }
 function mkPrepRow(item,secWrap){
   const row=document.createElement('div');row.className='irow';
   const isChk=prepCheckedSet.has(item.id);if(isChk)row.style.opacity='0.4';
   const note=item.n?`<div style="font-size:11px;color:var(--tx2);margin-top:2px">${item.n}</div>`:'';
   row.innerHTML=`<input type="checkbox" id="${item.id}" ${isChk?'checked':''}><label for="${item.id}" style="flex:1"><div style="display:flex;flex-wrap:wrap;align-items:center;gap:5px"><span style="font-size:13px;color:var(--tx0)">${item.t}</span></div>${note}</label>`;
-  row.querySelector('input').addEventListener('change',function(){
-    row.style.opacity=this.checked?'0.4':'1';
-    if(this.checked)prepCheckedSet.add(item.id);else prepCheckedSet.delete(item.id);
-    updPrep();savePrep();
-    if(secWrap){const all=[...secWrap.querySelectorAll('input[type="checkbox"]')];secWrap.style.opacity=all.every(c=>c.checked)?'0.6':'1';}
-  });
+  row.querySelector('input').addEventListener('change',function(){row.style.opacity=this.checked?'0.4':'1';if(this.checked)prepCheckedSet.add(item.id);else prepCheckedSet.delete(item.id);updPrep();savePrep();if(secWrap){const all=[...secWrap.querySelectorAll('input[type="checkbox"]')];secWrap.style.opacity=all.every(c=>c.checked)?'0.6':'1';}});
   return row;
 }
 function updPrep(){
@@ -804,22 +653,17 @@ function updPrep(){
 function savePrep(){try{localStorage.setItem(PREP_STORE,JSON.stringify({checked:[...prepCheckedSet],open:[...prepOpenSet]}));}catch(e){}}
 function resetPrep(){if(!confirm('Clear all prep checkmarks?'))return;prepCheckedSet.clear();savePrep();renderPrep();}
 
-/* ========= ACTIVITIES ================================================== */
-function renderActs(){
-  const sc=document.getElementById('acts-sc');sc.innerHTML='';
-  ACTS.forEach(sec=>{
-    const isOpen=actsOpenSet.has(sec.id);
+/* ===== ACTIVITIES (shared renderer) ===================================== */
+function renderActs(data,containerId,openSetRef){
+  const sc=document.getElementById(containerId);sc.innerHTML='';
+  data.forEach(sec=>{
+    const isOpen=openSetRef.has(sec.id);
     const wrap=document.createElement('div');wrap.className='sec-wrap';
     const hdr=document.createElement('div');hdr.className='sec-hdr';hdr.setAttribute('role','button');hdr.setAttribute('aria-expanded',String(isOpen));
     hdr.innerHTML=`<i class="ti ${sec.icon}" style="font-size:16px;color:var(--tx1)" aria-hidden="true"></i><span style="font-size:14px;font-weight:500;flex:1;color:var(--tx0)">${sec.title}</span><i class="ti ti-chevron-down" id="${sec.id}-av" style="font-size:14px;color:var(--tx2);transform:${isOpen?'rotate(180deg)':''}" aria-hidden="true"></i>`;
     const body=document.createElement('div');body.style.display=isOpen?'block':'none';
     sec.items.forEach(item=>body.appendChild(mkActRow(item)));
-    hdr.addEventListener('click',()=>{
-      const o=body.style.display!=='none';body.style.display=o?'none':'block';
-      if(o)actsOpenSet.delete(sec.id);else actsOpenSet.add(sec.id);
-      document.getElementById(`${sec.id}-av`).style.transform=o?'':'rotate(180deg)';
-      hdr.setAttribute('aria-expanded',String(!o));
-    });
+    hdr.addEventListener('click',()=>{const o=body.style.display!=='none';body.style.display=o?'none':'block';if(o)openSetRef.delete(sec.id);else openSetRef.add(sec.id);document.getElementById(`${sec.id}-av`).style.transform=o?'':'rotate(180deg)';hdr.setAttribute('aria-expanded',String(!o));});
     wrap.appendChild(hdr);wrap.appendChild(body);sc.appendChild(wrap);
   });
 }
@@ -829,15 +673,13 @@ function mkActRow(item){
   const stats=item.stats?`<div style="font-size:11px;color:var(--tx2);margin-top:3px">${item.stats}</div>`:'';
   const shuttle=item.shuttle?`<div style="font-size:11px;color:var(--tx2);margin-top:2px"><i class="ti ti-bus" style="font-size:10px;margin-right:3px" aria-hidden="true"></i>${item.shuttle}</div>`:'';
   const note=item.n?`<div style="font-size:11px;color:var(--tx1);margin-top:3px;line-height:1.5">${item.n}</div>`:'';
-  const costBook=[];
-  if(item.cost)costBook.push(`Cost: ${item.cost}`);
-  if(item.book)costBook.push(`Book: <span style="color:var(--tx-info)">${item.book}</span>`);
-  const extra=costBook.length?`<div style="font-size:11px;color:var(--tx2);margin-top:3px">${costBook.join(' \xb7 ')}</div>`:'';
+  const cb=[];if(item.cost)cb.push(`Cost: ${item.cost}`);if(item.book)cb.push(`Book: <span style="color:var(--tx-info)">${item.book}</span>`);
+  const extra=cb.length?`<div style="font-size:11px;color:var(--tx2);margin-top:3px">${cb.join(' \xb7 ')}</div>`:'';
   row.innerHTML=`<div style="display:flex;flex-wrap:wrap;align-items:center;gap:5px;margin-bottom:1px"><span style="font-size:13px;color:var(--tx0);font-weight:500">${item.t}</span>${tags}</div>${stats}${shuttle}${note}${extra}`;
   return row;
 }
 
-/* ========= BOOT ======================================================== */
+/* ===== BOOT ============================================================= */
 init();
 </script>
 </body>
